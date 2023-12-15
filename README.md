@@ -14,7 +14,7 @@ All offsets are stored in the `Patchers.lua` file. To find offsets, use the prov
 findClassPointer("YourClass")
 hackOffset(I[3], gg.TYPE_DWORD, "YourNewValue")
 ```
-
+##
 ### Patcher Functions
 1. **`Patch(offset, hex)`**: Patch the specified offset with the provided hex value.
 
@@ -22,14 +22,14 @@ hackOffset(I[3], gg.TYPE_DWORD, "YourNewValue")
 ```lua
 Patch(I[42], "C0035FD6")
 ```
-
+##
 2. **`Restore(offset)`**: Restore the original value of the specified offset.
 
 **Example:**
 ```lua
 Restore(I[42])
 ```
-
+##
 3. **`Patch_switch(name, offset1, hex1, offset2, hex2, ...)`**: Toggle between patching and restoring multiple offsets based on a toggle name.
 
 **Example:**
@@ -37,7 +37,7 @@ Restore(I[42])
 local toggleName = "OFF"
 Patch_switch(toggleName, I[1], "C0035FD6", I[2], "00008052C0035FD6")
 ```
-
+##
 4. **`Switch(name, offsets, hex_values)`**: Toggle between patching and restoring multiple offsets based on a toggle name (alternative).
 
 **Example:**
@@ -47,7 +47,7 @@ local patchOffsets = {I[1], I[2]}
 local patchHexValues = {"C0035FD6", "00008052C0035FD6"}
 Switch(toggleName, patchOffsets, patchHexValues)
 ```
-
+##
 ### Examples of Common Offsets
 Offsets for various features such as god mode, infinite ammo, and others are provided with explanations on how to update and find them, as well as version.
 
