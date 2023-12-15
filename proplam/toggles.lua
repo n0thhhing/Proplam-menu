@@ -1,13 +1,14 @@
 --require "patchers"
-ON = "[🟢]" OFF = "[🔴]"
+ON = "[🟢]"
+OFF = "[🔴]"
 --defult values--
-coval=tbi --collectibles
-cvalue="2b"
+coval = tbi --collectibles
+cvalue = "2b"
 lotval = tbi --lottery collectibles
 value = "2b"
-selr=myt --rarity
-raree="Mythical"
-colorr="🟣"
+selr = myt --rarity
+raree = "Mythical"
+colorr = "🟣"
 --account--
 le = OFF
 lb = OFF
@@ -47,26 +48,26 @@ ma = OFF
 rp = OFF
 eh = OFF
 ga = OFF
-cracked=OFF
-crack=false
+cracked = OFF
+crack = false
 --clickers--
-task=OFF
-pass=OFF
-gemc=OFF
-bmcl=OFF
+task = OFF
+pass = OFF
+gemc = OFF
+bmcl = OFF
 --gameplay--
-inf=OFF
-fir=OFF
-rel=OFF
-gcd=OFF
-tem=OFF
-swe=OFF
-god=OFF
-tgod=OFF
-petr=OFF
-rewp=OFF
-xrewm=OFF
-xrewm=OFF
-asc=OFF
-zomb=OFF
-checkc=OFF
+inf = OFF
+fir = OFF
+rel = OFF
+gcd = OFF
+tem = OFF
+swe = OFF
+god = OFF
+tgod = OFF
+petr = OFF
+rewp = OFF
+xrewm = OFF
+xrewm = OFF
+asc = OFF
+zomb = OFF
+checkc = OFF
