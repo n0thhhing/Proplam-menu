@@ -49,7 +49,7 @@ Switch(toggleName, patchOffsets, patchHexValues)
 ```
 
 ### Examples of Common Offsets
-Offsets for various features such as god mode, infinite ammo, and others are provided with explanations.
+Offsets for various features such as god mode, infinite ammo, and others are provided with explanations on how to update and find them, as well as version.
 
 ### Note
 The rest of the files' functionality is considered common sense, and users can explore them for additional features and tweaks.
