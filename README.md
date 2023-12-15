@@ -1,6 +1,6 @@
 
 ## Introduction
-This repository contains an open-source Game Guardian menu for a game. The main functionality is organized into multiple files: `Patchers.lua` and other common-sense functionality files. The primary purpose of this README is to guide users on how to find offsets and provide basic examples for using some of the functions.
+This repository contains an open-source Game Guardian menu for the game "PIXEL-GUN-3D". The main functionality is organized into multiple files: `Patchers.lua`, `proplam.lua`,`toggles.lua` and other common-sense functionality files. The primary purpose of this README is to guide users on how to find offsets and provide basic examples for using some of the functions.
 
 ## Patchers.lua
 The `Patchers.lua` file is where the main offset patches are defined.
