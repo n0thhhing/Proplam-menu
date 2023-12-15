@@ -54,5 +54,4 @@ Offsets for various features such as god mode, infinite ammo, and others are pro
 ### Note
 The rest of the files' functionality is considered common sense, and users can explore them for additional features and tweaks.
 
-Feel free to contribute and improve this open-source Game Guardian menu!
-```
+Feel free to improve this open-source Game menu!
