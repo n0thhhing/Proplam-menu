@@ -6,7 +6,7 @@ function O_dinitial_search(class)
 	gg.setRanges(gg.REGION_OTHER)
 	gg.searchNumber(":" .. class, gg.TYPE_BYTE)
 	count = gg.getResultsCount()
-	if (count == 0) then
+	if count == 0 then
 	else
 		Refiner = gg.getResults(1)
 		gg.refineNumber(Refiner[1].value, gg.TYPE_BYTE)
@@ -187,17 +187,7 @@ end
 ------------------------------------------------------------------------------
 
 --on/off toggle--
-function Patch_switch(
-name,
-	offset,
-	hex,
-	offset2,
-	hex2,
-	offset3,
-	hex3,
-	offset4,
-	hex4
-)
+function Patch_switch(name, offset, hex, offset2, hex2, offset3, hex3, offset4, hex4)
 	if name == OFF then
 		if hex2 == nil and hex3 == nil and hex4 == nil then
 			Patch(offset, hex)
@@ -241,7 +231,8 @@ name,
 	end
 end
 
---[[try at fix/simplify]] --[[
+--[[try at fix/simplify]]
+--[[
 function Switch(name, offsets, hex_values)
     if name == OFF then
         for i, offset in ipairs(offsets) do

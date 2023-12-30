@@ -947,7 +947,7 @@ function home()
 			prompt = gg.prompt({ "Put the speed you want" }, { "2" }, { "number" })
 
 			gg.setVisible(false)
-			gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC)
+			gg.setRanges(gg.REGION_ANONYMOUS, gg.REGION_C_ALLOC)
 			gg.clearResults()
 			gg.searchNumber("0000803FrD;ABAAAA3ErD;8FC2F53CrD::9", gg.TYPE_DWORD)
 			gg.refineNumber("1065353216", gg.TYPE_DWORD)
