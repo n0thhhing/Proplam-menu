@@ -1,9 +1,9 @@
 gg = require('gg')
-require('game')
+require('game') -- the gameplay menu
 require('patchers') -- for offset patches
 require('toggles') -- for on/off functions
-require('webhook')
-version = '23.7.2'
+require('webhook') -- broken
+version = '24.1.2'
 
 ------------------------------------------------------------------------------
 
@@ -22,7 +22,7 @@ function home()
         '[❌] • Exit',
       },
       nil,
-      'PG3D menu by her[x] ' .. '[' .. version .. ']'
+      'PG3D menu by Her[x] ' .. '[' .. version .. ']'
     )
 
   --exit--

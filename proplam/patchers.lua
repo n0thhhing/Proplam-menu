@@ -364,6 +364,7 @@ Offset[82] = 0x52AE91C --  unreleased royal [true] --done
 Offset[83] = 0x17C9190 -- armory price[not weps] --done
 --fields
 Field = {}
+
 Field[1] = '0x1BC'
 Field[2] = '0x1C8'
 Field[3] = '0x2A8'
