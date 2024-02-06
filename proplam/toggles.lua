@@ -1,14 +1,14 @@
 --require "patchers"
-ON = "[🟢]"
-OFF = "[🔴]"
+ON = '[🟢]'
+OFF = '[🔴]'
 --defult values--
 coval = tbi --collectibles
-cvalue = "2b"
+cvalue = '2b'
 lotval = tbi --lottery collectibles
-value = "2b"
+value = '2b'
 selr = myt --rarity
-raree = "Mythical"
-colorr = "🟣"
+raree = 'Mythical'
+colorr = '🟣'
 --account--
 le = OFF
 lb = OFF

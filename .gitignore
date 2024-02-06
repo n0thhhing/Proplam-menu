@@ -4,3 +4,6 @@ package.json
 package-lock.json
 .replit
 replit.nix
+main.sh
+.local
+.config
