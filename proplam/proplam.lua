@@ -394,7 +394,7 @@ function home()
       if rarity == 2 then
         selr = uco
         raree = 'Uncommon'
-        color = '🟢'
+        colorr = '🟢'
         arm()
       end
 
@@ -526,7 +526,7 @@ function home()
       end
       if cool == 3 then
         coval = fvh
-        cval = '500'
+        cvalue = '500'
         rew()
       end
       if cool == 4 then

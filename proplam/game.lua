@@ -1,6 +1,3 @@
---require "toggles"
---require "patchers"
-
 --main gameplay--
 function yes()
   local gameplay =

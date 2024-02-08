@@ -7,3 +7,4 @@ replit.nix
 main.sh
 .local
 .config
+**/*bak

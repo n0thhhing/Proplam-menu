@@ -1,4 +1,3 @@
---require "patchers"
 ON = '[🟢]'
 OFF = '[🔴]'
 --defult values--
