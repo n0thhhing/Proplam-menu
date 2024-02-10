@@ -185,53 +185,16 @@ end
 
 ------------------------------------------------------------------------------
 
---on/off toggle--
-function Patch_switch(name, offset, hex, offset2, hex2, offset3, hex3, offset4, hex4)
-  if name == OFF then
-    if hex2 == nil and hex3 == nil and hex4 == nil then
-      Patch(offset, hex)
-      name = ON
-    elseif hex3 == nil and hex4 == nil then
-      Patch(offset, hex)
-      Patch(offset2, hex2)
-      name = ON
-    elseif hex4 == nil then
-      Patch(offset, hex)
-      Patch(offset2, hex2)
-      Patch(offset3, hex3)
-      name = ON
-    else
-      Patch(offset, hex)
-      Patch(offset2, hex2)
-      Patch(offset3, hex3)
-      Patch(offset4, hex4)
-      name = ON
-    end
-  else
-    if hex2 == nil and hex3 == nil and hex4 == nil then
-      Restore(offset)
-      name = OFF
-    elseif hex3 == nil and hex4 == nil then
-      Restore(offset)
-      Restore(offset2)
-      name = OFF
-    elseif hex4 == nil then
-      Restore(offset)
-      Restore(offset2)
-      Restore(offset3)
-      name = OFF
-    else
-      Restore(offset)
-      Restore(offset2)
-      Restore(offset3)
-      Restore(offset4)
-      name = OFF
-    end
-  end
+function patchHex(hex, to)
+    gg.searchNumber("h " .. hex, gg.TYPE_BYTE)
+    gg.getResults(8)
+    gg.editAll("h " .. to, gg.TYPE_BYTE)
+    gg.clearResults()
 end
 
---[[try at fix/simplify]]
---[[
+------------------------------------------------------------------------------
+
+--on/off toggle--
 function Switch(name, offsets, hex_values)
     if name == OFF then
         for i, offset in ipairs(offsets) do
@@ -247,12 +210,6 @@ function Switch(name, offsets, hex_values)
     return name
 end
 
---example usage--
-local patchOffsets = {0x1000, 0x2000, 0x3000},{{A,B,C}}
-
--- Toggle patches based on the state
-Switch(shit, patchOffsets)
-]]
 ------------------------------------------------------------------------------
 
 --hex--

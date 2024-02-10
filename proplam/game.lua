@@ -122,7 +122,7 @@ function yes()
             nocharge()
             weaponmod()
           end
-          local bulletexplode = { { Fieldp[6], gg.TYPE_BYTE, 1 } }
+          local bulletexplode = { { Field[6], gg.TYPE_BYTE, 1 } }
           function bulletexplodingllet()
             for i, v in ipairs(bulletexplode) do
               hackOffset(v[1], v[2], v[3])
