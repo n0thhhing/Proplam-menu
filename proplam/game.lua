@@ -709,8 +709,8 @@ function yes()
             tem .. '[☠️] • Teamkill',
             swe .. '[🤬] • No swear filter',
             god .. '[💀] • Godmode[test]',
-            tgod .. '[🤖] • Turrent godmode[test]',
-            petr .. '[🙀] • No pet respawn time[test]',
+            tgod .. '[🤖] • Turrent godmode[patched]',
+            petr .. '[🙀] • No pet respawn time[patched]',
             rewp .. '[💵] • reward multi(part 1)',
             xrewm .. '[💵] • reward multi [below 65 only] (part 2)',
             xrewm .. '[💵] • reward multi [lvl65 only] (part 2)',
@@ -723,10 +723,18 @@ function yes()
       --ammo--
       if nonhook == 1 then
         if inf == OFF then
-          Patch(Offset[28], '20008052C0035FD6')
+          if useHex then
+            PatchHex(Hex[28], '20008052C0035FD6')
+          else
+            Patch(Offset[28], '20008052C0035FD6')
+          end
           inf = ON
         else
-          Restore(Offset[28])
+          if useHex then
+            RestoreHex(Hex[28])
+          else
+            Restore(Offset[28])
+          end
           inf = OFF
           gg.toast('Reverted')
         end
@@ -736,10 +744,18 @@ function yes()
       --fire rate--
       if nonhook == 2 then
         if fir == OFF then
-          Patch(Offset[24], 'E07B40B2C0035FD6')
+          if useHex then
+            PatchHex(Hex[24], 'E07B40B2C0035FD6')
+          else
+            Patch(Offset[24], 'E07B40B2C0035FD6')
+          end
           fir = ON
         else
-          Restore(Offset[24])
+          if useHex then
+            RestoreHex(Hex[24])
+          else
+            Restore(Offset[24])
+          end
           fir = OFF
           gg.toast('Reverted')
         end
@@ -755,12 +771,22 @@ function yes()
       --gadget cooldown--
       if nonhook == 4 then
         if gcd == OFF then
-          Patch(Offset[18], '20008052C0035FD6')
-          Patch(Offset[19], '20008052C0035FD6')
+          if useHex then
+            PatchHex(Hex[18], '20008052C0035FD6')
+            PatchHex(Hex[19], '20008052C0035FD6')
+          else
+            Patch(Offset[18], '20008052C0035FD6')
+            Patch(Offset[19], '20008052C0035FD6')
+          end
           gcd = ON
         else
-          Restore(Offset[19])
-          Restore(Offset[18])
+          if useHex then
+            RestoreHex(Hex[19])
+            RestoreHex(Hex[18])
+          else
+            Restore(Offset[19])
+            Restore(Offset[18])
+          end
           gcd = OFF
           gg.toast('Reverted')
         end
@@ -770,13 +796,22 @@ function yes()
       --teamkill--
       if nonhook == 5 then
         if tem == OFF then
-          o = Offset[26]
-          Patch(Offset[26], '00008052C0035FD6')
-          Patch(Offset[27], '00008052C0035FD6')
+          if useHex then
+            PatchHex(Hex[26], '00008052C0035FD6')
+            PatchHex(Hex[27], '00008052C0035FD6')
+          else
+            Patch(Offset[26], '00008052C0035FD6')
+            Patch(Offset[27], '00008052C0035FD6')
+          end
           tem = ON
         else
-          Restore(Offset[26])
-          Restore(Offset[27])
+          if useHex then
+            RestoreHex(Hex[26])
+            RestoreHex(Hex[27])
+          else
+            Restore(Offset[26])
+            Restore(Offset[27])
+          end
           tem = OFF
           gg.toast('Reverted')
         end
@@ -786,10 +821,18 @@ function yes()
       --swear filter--
       if nonhook == 6 then
         if swe == OFF then
-          Patch(Offset[28], '00008052C0035FD6')
+          if useHex then
+            PatchHex(Hex[28], '00008052C0035FD6')
+          else
+            Patch(Offset[28], '00008052C0035FD6')
+          end
           swe = ON
         else
-          Restore(Offset[28])
+          if useHex then
+            RestoreHex(Hex[28])
+          else
+            Restore(Offset[28])
+          end
           swe = OFF
           gg.toast('Reverted')
         end
@@ -799,16 +842,30 @@ function yes()
       --godmode--
       if nonhook == 7 then
         if god == OFF then
-          Patch(Offset[29], 'C0035FD6')
-          Patch(Offset[30], 'C0035FD6')
-          Patch(Offset[31], 'C0035FD6')
-          Patch(Offset[32], 'C0035FD6')
+          if useHex then
+            PatchHex(Hex[29], 'C0035FD6')
+            PatchHex(Hex[30], 'C0035FD6')
+            PatchHex(Hex[31], 'C0035FD6')
+            PatchHex(Hex[32], 'C0035FD6')
+          else
+            Patch(Offset[29], 'C0035FD6')
+            Patch(Offset[30], 'C0035FD6')
+            Patch(Offset[31], 'C0035FD6')
+            Patch(Offset[32], 'C0035FD6')
+          end
           god = ON
         else
-          Restore(Offset[29])
-          Restore(Offset[30])
-          Restore(Offset[31])
-          Restore(Offset[32])
+          if useHex then
+            RestoreHex(Hex[29])
+            RestoreHex(Hex[30])
+            RestoreHex(Hex[31])
+            RestoreHex(Hex[32])
+          else
+            Restore(Offset[29])
+            Restore(Offset[30])
+            Restore(Offset[31])
+            Restore(Offset[32])
+          end
           god = OFF
           gg.toast('Reverted')
         end
@@ -817,37 +874,23 @@ function yes()
 
       --turrentgod--
       if nonhook == 8 then
-        if tgod == OFF then
-          Patch(Offset[33], 'C0035FD6')
-          Patch(Offset[34], 'C0035FD6')
-          Patch(Offset[35], 'C0035FD6')
-          tgod = ON
-        else
-          Restore(Offset[33])
-          Restore(Offset[34])
-          Restore(Offset[35])
-          tgod = OFF
-          gg.toast('Reverted')
-        end
+        gg.alert('patched')
         non()
       end
 
       --petrespawn--
       if nonhook == 9 then
-        if petr == OFF then
-          Patch(Offset[36], '00008052C0035FD6')
-          petr = ON
-        else
-          Restore(Offset[36])
-          petr = OFF
-          gg.toast('Reverted')
-        end
+        gg.alert('patched')
         non()
       end
 
       --multi part 1
       if nonhook == 10 then
-        Patch(Offset[63], '20008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[63], '20008052C0035FD6')
+        else
+          Patch(Offset[63], '20008052C0035FD6')
+        end
         is2 = true
         rewp = ON
         non()
@@ -858,10 +901,18 @@ function yes()
         if is2 == true then
           gg.alert('you will crash if your level 65')
           if xrewm == OFF then
-            Patch(Offset[42], '600C8052C0035FD6')
+            if useHex then
+              PatchHex(Hex[42], '600C8052C0035FD6')
+            else
+              Patch(Offset[42], '600C8052C0035FD6')
+            end
             xrewm = ON
           else
-            Restore(Offset[42])
+            if useHex then
+              RestoreHex(Hex[42])
+            else
+              Restore(Offset[42])
+            end
             xrewm = OFF
           end
         else
@@ -885,30 +936,54 @@ function yes()
           )
         if lvlres == 1 then
           if xrewm == OFF then
-            Patch(Offset[42], 'E0048052C0035FD6')
+            if useHex then
+              PatchHex(Hex[42], 'E0048052C0035FD6')
+            else
+              Patch(Offset[42], 'E0048052C0035FD6')
+            end
             xrewm = ON
           else
-            Restore(Offset[42])
+            if useHex then
+              RestoreHex(Hex[42])
+            else
+              Restore(Offset[42])
+            end
             xrewm = OFF
           end
         end
 
         if lvlres == 2 then
           if xrewm == OFF then
-            Patch(Offset[42], '20088052C0035FD6')
+            if useHex then
+              PatchHex(Hex[42], '20088052C0035FD6')
+            else
+              Patch(Offset[42], '20088052C0035FD6')
+            end
             xrewm = ON
           else
-            Restore(Offset[42])
+            if useHex then
+              RestoreHex(Hex[42])
+            else
+              Restore(Offset[42])
+            end
             xrewm = OFF
           end
         end
 
         if lvlres == 3 then
           if xrewm == OFF then
-            Patch(Offset[42], '600C8052C0035FD6')
+            if useHex then
+              PatchHex(Hex[42], '600C8052C0035FD6')
+            else
+              Patch(Offset[42], '600C8052C0035FD6')
+            end
             xrewm = ON
           else
-            Restore(Offset[42])
+            if useHex then
+              RestoreHex(Hex[42])
+            else
+              Restore(Offset[42])
+            end
             xrewm = OFF
           end
         end
@@ -965,7 +1040,11 @@ function yes()
 
           if arena == 1 then
             if asc == OFF then
-              Patch(Offset[37], 'E07B40B2C0035FD6')
+              if useHex then
+                PatchHex(Hex[37], 'E07B40B2C0035FD6')
+              else
+                Patch(Offset[37], 'E07B40B2C0035FD6')
+              end
               asc = ON
             else
               asc = OFF
@@ -1002,10 +1081,18 @@ function yes()
             )
           if race == 1 then
             if checkc == OFF then
-              Patch(Offset[38], 'E07B40B2C0035FD6')
+              if useHex then
+                PatchHex(Hex[38], 'E07B40B2C0035FD6')
+              else
+                Patch(Offset[38], 'E07B40B2C0035FD6')
+              end
               checkc = ON
             else
-              Restore(Offset[38])
+              if useHex then
+                RestoreHex(Hex[38])
+              else
+                Restore(Offset[38])
+              end
               checkc = OFF
               gg.toast('Reverted')
             end
@@ -1032,7 +1119,11 @@ function yes()
       if gmode == 3 then
         pan = gg.choice({ '[📔️] • unlock all worlds', '⬅ Back' }, nil, '[📔️] • Campaign')
         if pan == 1 then
-          Patch(Offset[51], '20008052C0035FD6')
+          if useHex then
+            PatchHex(Hex[51], '20008052C0035FD6')
+          else
+            PatchHex(Hex[51], '20008052C0035FD6')
+          end
         end
         if pan == 2 then
           yes()

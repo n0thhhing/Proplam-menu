@@ -1,5 +1,7 @@
 ON = '[🟢]'
 OFF = '[🔴]'
+--config
+emulator = false
 --defult values--
 coval = tbi --collectibles
 cvalue = '2b'

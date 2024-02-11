@@ -1,8 +1,9 @@
 gg = require('gg')
-require('game') -- the gameplay menu
+require('game') --gameplay
 require('patchers') -- for offset patches
 require('toggles') -- for on/off functions
-require('webhook') -- broken
+require('config') -- config
+require('values') -- offsets/hex
 version = '24.1.2'
 
 ------------------------------------------------------------------------------
@@ -18,7 +19,7 @@ function home()
         '[☝️] • Clickers',
         '[🕹️] • Gameplay',
         '[❓] • Misc',
-        '[📑] • Report problems/questions',
+        '[⚙️] • Config',
         '[❌] • Exit',
       },
       nil,
@@ -41,7 +42,7 @@ function home()
   function acc()
     account = gg.choice(
       {
-        le .. 'Level 65', --1
+        le .. 'Level 65 [partly patched]', --1
         lb .. 'Lobby bundles', --2
         cp .. 'Clan parts', --3
         ce .. 'Clan energy', --4
@@ -60,12 +61,22 @@ function home()
     --level65--
     if account == 1 then
       if le == OFF then
-        Patch(Offset[63], '20008052C0035FD6')
-        Patch(Offset[42], '00328052C0035FD6')
+        if useHex then
+          PatchHex(Hex[63], '20008052C0035FD6')
+          PatchHex(Hex[42], '00328052C0035FD6')
+        else
+          Patch(Offset[63], '20008052C0035FD6')
+          Patch(Offset[42], '00328052C0035FD6')
+        end
         le = ON
       else
-        Restore(Offset[63])
-        Restore(Offset[42])
+        if useHex then
+          RestoreHex(Hex[63])
+          RestoreHex(Hex[42])
+        else
+          Restore(Offset[63])
+          Restore(Offset[42])
+        end
         le = OFF
       end
       acc()
@@ -74,8 +85,19 @@ function home()
     --lobby bundles--
     if account == 2 then
       if lb == OFF then
+        if useHex then
+          PatchHex(Hex[21], '20008052C0035FD6')
+        else
+          print('this probably wont work unless you turn useHex on in the config menu')
+          Patch(Offset[21], '20008052C0035FD6')
+        end
         lb = ON
       else
+        if useHex then
+          RestoreHex(Hex[21])
+        else
+          Restore(Offset[21])
+        end
         lb = OFF
       end
       acc()
@@ -84,12 +106,22 @@ function home()
     --clan parts--
     if account == 3 then
       if cp == OFF then
-        Patch(Offset[1], '00008052C0035FD6')
-        Patch(Offset[2], '00008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[1], '00008052C0035FD6')
+          PatchHex(Hex[2], '00008052C0035FD6')
+        else
+          Patch(Offset[1], '00008052C0035FD6')
+          Patch(Offset[2], '00008052C0035FD6')
+        end
         cp = ON
       else
-        Restore(Offset[1])
-        Restore(Offset[2])
+        if useHex then
+          RestoreHex(Hex[1])
+          RestoreHex(Hex[2])
+        else
+          Restore(Offset[1])
+          Restore(Offset[2])
+        end
         cp = OFF
         gg.toast('Reverted')
       end
@@ -99,10 +131,18 @@ function home()
     --clan energy--
     if account == 4 then
       if ce == OFF then
-        Patch(Offset[3], '00008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[3], '00008052C0035FD6')
+        else
+          Patch(Offset[3], '00008052C0035FD6')
+        end
         ce = ON
       else
-        Restore(Offset[3])
+        if useHex then
+          RestoreHex(Hex[3])
+        else
+          Restore(Offset[3])
+        end
         ce = OFF
       end
       acc()
@@ -111,10 +151,18 @@ function home()
     --emp--
     if account == 7 then
       if ie == OFF then
-        Patch(Offset[62], 'E01B1632C0035FD6')
+        if useHex then
+          PatchHex(Hex[62], 'E01B1632C0035FD6')
+        else
+          Patch(Offset[62], 'E01B1632C0035FD6')
+        end
         ie = ON
       else
-        Restore(Offset[62])
+        if useHex then
+          RestoreHex(Hex[62])
+        else
+          Restore(Offset[62])
+        end
         ie = OFF
       end
       rew()
@@ -156,10 +204,18 @@ function home()
     --armor price--
     if armor == 1 then
       if pm == OFF then
-        Patch(Offset[83], xtrue)
+        if useHex then
+          PatchHex(Hex[83], xtrue)
+        else
+          Patch(Offset[83], xtrue)
+        end
         pm = ON
       else
-        Restore(Offset[84])
+        if useHex then
+          RestoreHex(Hex[83])
+        else
+          Restore(Offset[84])
+        end
         pm = OFF
       end
       arm()
@@ -168,12 +224,22 @@ function home()
     --unlock guns and shovels--
     if armor == 2 then
       if ug == OFF then
-        Patch(Offset[52], '00008052C0035FD6')
-        Patch(Offset[53], '00008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[52], '00008052C0035FD6')
+          PatchHex(Hex[53], '00008052C0035FD6')
+        else
+          Patch(Offset[52], '00008052C0035FD6')
+          Patch(Offset[53], '00008052C0035FD6')
+        end
         ug = ON
       else
-        Restore(Offset[52])
-        Restore(Offset[53])
+        if useHex then
+          RestoreHex(Hex[52])
+          RestoreHex(Hex[53])
+        else
+          Restore(Offset[52])
+          Restore(Offset[53])
+        end
         ug = OFF
       end
       arm()
@@ -182,8 +248,13 @@ function home()
     --unlock holiday wear--
     if armor == 3 then
       if uh == OFF then
-        Patch(Offset[72], '401F80D2C0035FD6')
-        Patch(Offset[73], '20008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[72], '401F80D2C0035FD6')
+          PatchHex(Hex[73], '20008052C0035FD6')
+        else
+          Patch(Offset[72], '401F80D2C0035FD6')
+          Patch(Offset[73], '20008052C0035FD6')
+        end
         uh = ON
       else
         Restore(Offset[72])
@@ -196,10 +267,18 @@ function home()
     --unlock clan armor--
     if armor == 4 then
       if uc == OFF then
-        Patch(Offset[79], '00008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[79], '00008052C0035FD6')
+        else
+          Patch(Offset[79], '00008052C0035FD6')
+        end
         uc = ON
       else
-        Restore(Offset[79])
+        if useHex then
+          RestoreHex(Hex[79])
+        else
+          Restore(Offset[79])
+        end
         uc = OFF
       end
       arm()
@@ -208,12 +287,22 @@ function home()
     --free craft--
     if armor == 5 then
       if fc == OFF then
-        Patch(Offset[49], '20008052C0035FD6')
-        Patch(Offset[50], 'E07C8052C0035FD6')
+        if useHex then
+          PatchHex(Hex[49], '20008052C0035FD6')
+          PatchHex(Hex[50], 'E07C8052C0035FD6')
+        else
+          Patch(Offset[49], '20008052C0035FD6')
+          Patch(Offset[50], 'E07C8052C0035FD6')
+        end
         fc = ON
       else
-        Restore(Offset[49])
-        Restore(Offset[50])
+        if useHex then
+          RestoreHex(Hex[49])
+          RestoreHex(Hex[50])
+        else
+          Restore(Offset[49])
+          Restore(Offset[50])
+        end
         fc = OFF
       end
       arm()
@@ -222,14 +311,26 @@ function home()
     --unlock royal skins--
     if armor == 6 then
       if ur == OFF then
-        Patch(Offset[54], 'E0031F2AC0035FD6')
-        Patch(Offset[55], '20008052C0035FD6')
-        Patch(Offset[71], '20008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[54], 'E0031F2AC0035FD6')
+          PatchHex(Hex[55], '20008052C0035FD6')
+          PatchHex(Hex[71], '20008052C0035FD6')
+        else
+          Patch(Offset[54], 'E0031F2AC0035FD6')
+          Patch(Offset[55], '20008052C0035FD6')
+          Patch(Offset[71], '20008052C0035FD6')
+        end
         ur = ON
       else
-        Restore(Offset[54])
-        Restore(Offset[55])
-        Restore(Offset[71])
+        if useHex then
+          RestoreHex(Hex[54])
+          RestoreHex(Hex[55])
+          RestoreHex(Hex[71])
+        else
+          Restore(Offset[54])
+          Restore(Offset[55])
+          Restore(Offset[71])
+        end
         ur = OFF
       end
       arm()
@@ -238,12 +339,22 @@ function home()
     --unlock hidden royal--
     if armor == 7 then
       if ah == OFF then
-        Patch(Offset[81], '00008052C0035FD6')
-        Patch(Offset[82], '20008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[81], '00008052C0035FD6')
+          PatchHex(Hex[82], '20008052C0035FD6')
+        else
+          Patch(Offset[81], '00008052C0035FD6')
+          Patch(Offset[82], '20008052C0035FD6')
+        end
         ah = ON
       else
-        Restore(Offset[81])
-        Restore(Offset[82])
+        if useHex then
+          RestoreHex(Hex[81])
+          RestoreHex(Hex[82])
+        else
+          Restore(Offset[81])
+          Restore(Offset[82])
+        end
         ah = OFF
       end
       arm()
@@ -252,10 +363,18 @@ function home()
     --show unreleased hats/vehicles--
     if armor == 8 then
       if su == OFF then
-        Patch(Offset[71], '20008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[71], '20008052C0035FD6')
+        else
+          Patch(Offset[71], '20008052C0035FD6')
+        end
         su = ON
       else
-        Restore(Offset[71])
+        if useHex then
+          RestoreHex(Hex[71])
+        else
+          Restore(Offset[71])
+        end
         su = OFF
       end
       arm()
@@ -264,12 +383,22 @@ function home()
     --unlock wep skins--
     if armor == 9 then
       if uw == OFF then
-        Patch(Offset[56], '20008052C0035FD6')
-        Patch(Offset[57], '00008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[56], '20008052C0035FD6')
+          PatchHex(Hex[57], '00008052C0035FD6')
+        else
+          Patch(Offset[56], '20008052C0035FD6')
+          Patch(Offset[57], '00008052C0035FD6')
+        end
         uw = ON
       else
-        Restore(Offset[56])
-        Restore(Offset[57])
+        if useHex then
+          RestoreHex(Hex[56])
+          RestoreHex(Hex[57])
+        else
+          Restore(Offset[56])
+          Restore(Offset[57])
+        end
         uw = OFF
       end
       arm()
@@ -278,10 +407,18 @@ function home()
     --unlock gadgets--
     if armor == 10 then
       if ua == OFF then
-        Patch(Offset[12], '20008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[12], '20008052C0035FD6')
+        else
+          Patch(Offset[12], '20008052C0035FD6')
+        end
         ua = ON
       else
-        Restore(Offset[12])
+        if useHex then
+          RestoreHex(Hex[12])
+        else
+          Restore(Offset[12])
+        end
         ua = OFF
       end
       arm()
@@ -290,12 +427,22 @@ function home()
     --show deleted/exclusive gadgets--
     if armor == 11 then
       if sd == OFF then
-        Patch(Offset[60], '20008052C0035FD6')
-        Patch(Offset[61], '20008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[60], '20008052C0035FD6')
+          PatchHex(Hex[61], '20008052C0035FD6')
+        else
+          Patch(Offset[60], '20008052C0035FD6')
+          Patch(Offset[61], '20008052C0035FD6')
+        end
         sd = ON
       else
-        Restore(Offset[60])
-        Restore(Offset[61])
+        if useHex then
+          RestoreHex(Hex[60])
+          RestoreHex(Hex[61])
+        else
+          Restore(Offset[60])
+          Restore(Offset[61])
+        end
         sd = OFF
       end
       arm()
@@ -304,10 +451,18 @@ function home()
     --unlock clan gadgets--
     if armor == 12 then
       if uu == OFF then
-        Patch(Offset[69], '20008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[69], '20008052C0035FD6')
+        else
+          Patch(Offset[69], '20008052C0035FD6')
+        end
         uu = ON
       else
-        Restore(Offset[69])
+        if useHex then
+          RestoreHex(Hex[69])
+        else
+          Restore(Offset[69])
+        end
         uu = OFF
       end
       arm()
@@ -316,10 +471,18 @@ function home()
     --0 parts modules--
     if armor == 13 then
       if pa == OFF then
-        Patch(Offset[17], '00008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[17], '00008052C0035FD6')
+        else
+          Patch(Offset[17], '00008052C0035FD6')
+        end
         pa = ON
       else
-        Restore(Offset[17])
+        if useHex then
+          RestoreHex(Hex[17])
+        else
+          Restore(Offset[17])
+        end
         pa = OFF
       end
       arm()
@@ -328,14 +491,26 @@ function home()
     --x modules--
     if armor == 14 then
       if xm == OFF then
-        Patch(Offset[14], 'C0035FD6F55301A9')
-        Patch(Offset[15], '20008052C0035FD6')
-        Patch(Offset[16], '40018052C0035FD6')
+        if useHex then
+          PatchHex(Hex[14], 'C0035FD6F55301A9')
+          PatchHex(Hex[15], '20008052C0035FD6')
+          PatchHex(Hex[16], '40018052C0035FD6')
+        else
+          Patch(Offset[14], 'C0035FD6F55301A9')
+          Patch(Offset[15], '20008052C0035FD6')
+          Patch(Offset[16], '40018052C0035FD6')
+        end
         xm = ON
       else
-        Restore(Offset[14])
-        Restore(Offset[15])
-        Restore(Offset[16])
+        if useHex then
+          RestoreHex(Hex[14])
+          RestoreHex(Hex[15])
+          RestoreHex(Hex[16])
+        else
+          Restore(Offset[14])
+          Restore(Offset[15])
+          Restore(Offset[16])
+        end
         xm = OFF
       end
       arm()
@@ -344,7 +519,11 @@ function home()
     --modules %--
     if armor == 15 then
       if mp == OFF then
-        Patch(Offset[13], '00008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[13], '00008052C0035FD6')
+        else
+          PatchHex(Hex[13], '00008052C0035FD6')
+        end
         mp = ON
       else
         Restore(Offset[13])
@@ -353,13 +532,21 @@ function home()
       arm()
     end
 
-    --chaneg to selcected rarityt
+    --change to selcected rarity
     if armor == 16 then
       if ra == OFF then
-        Patch(Offset[39], selr)
+        if useHex then
+          PatchHex(Hex[39], selr)
+        else
+          Patch(Offset[39], selr)
+        end
         ra = ON
       else
-        Restore(Offset[39])
+        if useHex then
+          RestoreHex(Hex[39])
+        else
+          Restore(Offset[39])
+        end
         ra = OFF
       end
       arm()()
@@ -475,10 +662,18 @@ function home()
     --collectible patch--
     if rewards == 1 then
       if co == OFF then
-        Patch(Offset[6], coval)
+        if useHex then
+          PatchHex(Hex[6], coval)
+        else
+          Patch(Offset[6], coval)
+        end
         co = ON
       else
-        Restore(Offset[6])
+        if useHex then
+          RestoreHex(Hex[6])
+        else
+          Restore(Offset[6])
+        end
         co = OFF
         gg.toast('Reverted')
       end
@@ -563,10 +758,18 @@ function home()
 
     if rewards == 3 then
       if lo == OFF then
-        Patch(Offset[5], lotval)
+        if useHex then
+          PatchHex(Hex[5], lotval)
+        else
+          PatchHex(Hex[5], lotval)
+        end
         lo = ON
       else
-        Restore(Offset[5])
+        if useHex then
+          RestoreHex(Hex[5])
+        else
+          Restore(Offset[5])
+        end
         lo = OFF
       end
       rew()
@@ -679,31 +882,56 @@ function home()
           )
         if zz == 1 then
         elseif zz == 2 then
-          Patch(Offset[6], '803E8052C0035FD6')
-          Patch(Offset[80], '20008052C0035FD6')
+          if useHex then
+            PatchHex(Hex[6], '803E8052C0035FD6')
+            PatchHex(Hex[80], '20008052C0035FD6')
+          else
+            Patch(Offset[6], '803E8052C0035FD6')
+            Patch(Offset[80], '20008052C0035FD6')
+          end
           crack = true
           cracked = ON
         elseif zz == 2 then
-          Patch(Offset[6], '007D8052C0035FD6')
-          Patch(Offset[80], '20008052C0035FD6')
+          if useHex then
+            PatchHex(Hex[6], '007D8052C0035FD6')
+            PatchHex(Hex[80], '20008052C0035FD6')
+          else
+            Patch(Offset[6], '007D8052C0035FD6')
+            Patch(Offset[80], '20008052C0035FD6')
+          end
           crack = true
           cracked = ON
         elseif zz == 3 then
-          Patch(Offset[6], '80388152C0035FD6')
-          Patch(Offset[80], '20008052C0035FD6')
+          if useHex then
+            PatchHex(Hex[6], '80388152C0035FD6')
+            PatchHex(Hex[80], '20008052C0035FD6')
+          else
+            Patch(Offset[6], '80388152C0035FD6')
+            Patch(Offset[80], '20008052C0035FD6')
+          end
           crack = true
           cracked = ON
         elseif zz == 4 then
-          Patch(Offset[6], '00718252C0035FD6')
-          Patch(Offset[80], '20008052C0035FD6')
+          if useHex then
+            PatchHex(Hex[6], '00718252C0035FD6')
+            PatchHex(Hex[80], '20008052C0035FD6')
+          else
+            Patch(Offset[6], '00718252C0035FD6')
+            Patch(Offset[80], '20008052C0035FD6')
+          end
           crack = true
           cracked = ON
         elseif zz == 5 or zz == nil then
           rew()
         end
       else
-        Restore(Offset[6])
-        Restore(Offset[80])
+        if useHex then
+          RestoreHex(Hex[6])
+          RestoreHex(Hex[80])
+        else
+          Restore(Offset[6])
+          Restore(Offset[80])
+        end
         cracked = OFF
       end
       rew()
@@ -712,10 +940,18 @@ function home()
     --free lottery--
     if rewards == 6 then
       if ff == OFF then
-        Patch(Offset[4], 'E0E18412C0035FD6')
+        if useHex then
+          PatchHex(Hex[4], 'E0E18412C0035FD6')
+        else
+          Patch(Offset[4], 'E0E18412C0035FD6')
+        end
         ff = ON
       else
-        Restore(Offset[4])
+        if useHex then
+          RestoreHex(Hex[4])
+        else
+          Restore(Offset[4])
+        end
         ff = OFF
         gg.toast('Reverted')
       end
@@ -725,12 +961,22 @@ function home()
     --free clan chests--
     if rewards == 7 then
       if fl == OFF then
-        Patch(Offset[44], '00008052C0035FD6')
-        Patch(Offset[45], '00008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[44], '00008052C0035FD6')
+          PatchHex(Hex[45], '00008052C0035FD6')
+        else
+          Patch(Offset[44], '00008052C0035FD6')
+          Patch(Offset[45], '00008052C0035FD6')
+        end
         fl = ON
       else
-        Restore(Offset[44])
-        Restore(Offset[45])
+        if useHex then
+          RestoreHex(Hex[44])
+          RestoreHex(Hex[45])
+        else
+          Restore(Offset[44])
+          Restore(Offset[45])
+        end
         fl = OFF
       end
       rew()
@@ -739,10 +985,18 @@ function home()
     --free chest count--
     if rewards == 8 then
       if fa == OFF then
-        Patch(Offset[7], 'E07B40B2C0035FD6')
+        if useHex then
+          PatchHex(Hex[7], 'E07B40B2C0035FD6')
+        else
+          Patch(Offset[7], 'E07B40B2C0035FD6')
+        end
         fa = ON
       else
-        Restore(Offset[7])
+        if useHex then
+          RestoreHex(Hex[7])
+        else
+          Restore(Offset[7])
+        end
         fa = OFF
       end
       rew()
@@ -751,10 +1005,18 @@ function home()
     --super chest collection points--
     if rewards == 9 then
       if sp == OFF then
-        Patch(Offset[46], '80388152C0035FD6')
+        if useHex then
+          PatchHex(Hex[46], '80388152C0035FD6')
+        else
+          Patch(Offset[46], '80388152C0035FD6')
+        end
         sp = ON
       else
-        Restore(Offset[46])
+        if useHex then
+          RestoreHex(Hex[46])
+        else
+          Restore(Offset[46])
+        end
         sp = OFF
       end
       rew()
@@ -763,10 +1025,18 @@ function home()
     --unlimited super chests--
     if rewards == 10 then
       if uc == OFF then
-        Patch(Offset[43], '00008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[43], '00008052C0035FD6')
+        else
+          Patch(Offset[43], '00008052C0035FD6')
+        end
         uc = ON
       else
-        Restore(Offset[43])
+        if useHex then
+          RestoreHex(Hex[43])
+        else
+          Restore(Offset[43])
+        end
         uc = OFF
       end
       rew()
@@ -775,10 +1045,18 @@ function home()
     --egg reward mod--
     if rewards == 11 then
       if eg == OFF then
-        Patch(Offset[48], 'E07C8052C0035FD6')
+        if useHex then
+          PatchHex(Hex[48], 'E07C8052C0035FD6')
+        else
+          Patch(Offset[48], 'E07C8052C0035FD6')
+        end
         eg = ON
       else
-        Restore(Offset[48])
+        if useHex then
+          RestoreHex(Hex[48])
+        else
+          Restore(Offset[48])
+        end
         eg = OFF
       end
       rew()
@@ -787,7 +1065,11 @@ function home()
     --premium pass--
     if rewards == 12 then
       if pp == OFF then
-        Patch(Offset[65], '20008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[65], '20008052C0035FD6')
+        else
+          Patch(Offset[65], '20008052C0035FD6')
+        end
         pp = ON
       else
         Restore(Offset[65])
@@ -799,10 +1081,18 @@ function home()
     --max pass--
     if rewards == 13 then
       if ma == OFF then
-        Patch(Offset[64], '00A68E52C0035FD6')
+        if useHex then
+          PatchHex(Hex[64], '00A68E52C0035FD6')
+        else
+          Patch(Offset[64], '00A68E52C0035FD6')
+        end
         ma = ON
       else
-        Restore(Offset[64])
+        if useHex then
+          RestoreHex(Hex[64])
+        else
+          Restore(Offset[64])
+        end
         ma = OFF
       end
       rew()
@@ -811,10 +1101,18 @@ function home()
     --reset pass--
     if rewards == 14 then
       if rp == OFF then
-        Patch(Offset[66], '20008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[66], '20008052C0035FD6')
+        else
+          Patch(Offset[66], '20008052C0035FD6')
+        end
         rp = ON
       else
-        Restore(Offset[66])
+        if useHex then
+          RestoreHex(Hex[66])
+        else
+          Restore(Offset[66])
+        end
         rp = OFF
       end
       rew()
@@ -823,10 +1121,18 @@ function home()
     --no egg cd--
     if rewards == 15 then
       if eh == OFF then
-        Patch(Offset[67], '20008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[67], '20008052C0035FD6')
+        else
+          Patch(Offset[67], '20008052C0035FD6')
+        end
         eh = ON
       else
-        Restore(Offset[68])
+        if useHex then
+          RestoreHex(Hex[68])
+        else
+          Restore(Offset[68])
+        end
         eh = OFF
       end
       rew()
@@ -835,14 +1141,26 @@ function home()
     --gift pass offers--
     if rewards == 16 then
       if ga == OFF then
-        Patch(Offset[76], '200080D2C0035FD6')
-        Patch(Offset[77], '200080D2C0035FD6')
-        Patch(Offset[78], '200080D2C0035FD6')
+        if useHex then
+          PatchHex(Hex[76], '200080D2C0035FD6')
+          PatchHex(Hex[77], '200080D2C0035FD6')
+          PatchHex(Hex[78], '200080D2C0035FD6')
+        else
+          Patch(Offset[76], '200080D2C0035FD6')
+          Patch(Offset[77], '200080D2C0035FD6')
+          Patch(Offset[78], '200080D2C0035FD6')
+        end
         ga = ON
       else
-        Restore(Offset[76])
-        Restore(Offset[77])
-        Restore(Offset[78])
+        if useHex then
+          RestoreHex(Hex[76])
+          RestoreHex(Hex[77])
+          RestoreHex(Hex[78])
+        else
+          Restore(Offset[76])
+          Restore(Offset[77])
+          Restore(Offset[78])
+        end
         ga = OFF
       end
       rew()
@@ -875,10 +1193,18 @@ function home()
     --task clicker--
     if clickers == 2 then
       if task == OFF then
-        Patch(Offset[9], '20008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[9], '20008052C0035FD6')
+        else
+          Patch(Offset[9], '20008052C0035FD6')
+        end
         task = ON
       else
-        Restore(Offset[9])
+        if useHex then
+          RestoreHex(Hex[9])
+        else
+          Restore(Offset[9])
+        end
         task = OFF
       end
       cli()
@@ -887,10 +1213,18 @@ function home()
     --pass reward clicker--
     if clickers == 3 then
       if pass == OFF then
-        Patch(Offset[10], '00008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[10], '00008052C0035FD6')
+        else
+          Patch(Offset[10], '00008052C0035FD6')
+        end
         pass = ON
       else
-        Restore(Offset[10])
+        if useHex then
+          RestoreHex(Hex[10])
+        else
+          Restore(Offset[10])
+        end
         pass = OFF
       end
       cli()
@@ -899,10 +1233,18 @@ function home()
     --gallery clicker--
     if clickers == 4 then
       if gemc == OFF then
-        Patch(Offset[8], '200080D2C0035FD6')
+        if useHex then
+          PatchHex(Hex[8], '200080D2C0035FD6')
+        else
+          Patch(Offset[8], '200080D2C0035FD6')
+        end
         gemc = ON
       else
-        Restore(Offset[8])
+        if useHex then
+          RestoreHex(Hex[8])
+        else
+          Restore(Offset[8])
+        end
         gemc = OFF
       end
       cli()
@@ -911,10 +1253,18 @@ function home()
     --black market clicker--
     if clickers == 5 then
       if bmcl == OFF then
-        Patch(Offset[11], '00008052C0035FD6')
+        if useHex then
+          PatchHex(Hex[11], '00008052C0035FD6')
+        else
+          Patch(Offset[11], '00008052C0035FD6')
+        end
         bmcl = ON
       else
-        Restore(Offset[11])
+        if useHex then
+          RestoreHex(Hex[11])
+        else
+          Restore(Offset[11])
+        end
         bmcl = OFF
       end
       cli()
@@ -1100,10 +1450,9 @@ function home()
     end
   end
 
-  --info--
+  --config--
   function fni()
-    gg.alert('broke this')
-    --userReport()
+    updateConfig()
   end
 
   --calls--
