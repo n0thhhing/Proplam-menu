@@ -1,4 +1,3 @@
-gg = require('gg')
 require('game') --gameplay
 require('patchers') -- for offset patches
 require('toggles') -- for on/off functions

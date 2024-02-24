@@ -98,7 +98,6 @@ function hackOffset(_offset, type, value)
   gg.editAll(value, type)
 end
 
-------------------------------------------------------------------------------
 --patchers--
 local editedHexValues = {}
 
@@ -163,7 +162,6 @@ function Patch(offset, hex)
   gg.clearResults()
 end
 
-------------------------------------------------------------------------------
 --revert--
 function RestoreHex(hex)
   local editedHex = editedHexValues[hex]
@@ -206,8 +204,6 @@ function Restore(offset)
   gg.clearResults()
 end
 
-------------------------------------------------------------------------------
-
 --on/off toggle--
 function Switch(name, offsets, hex_values)
   if name == OFF then
@@ -222,4 +218,26 @@ function Switch(name, offsets, hex_values)
     name = OFF
   end
   return name
+end
+
+function getHex(offset, size)
+  local targetaddr = 0
+  local targets = {}
+  local result = {}
+  for i, v in ipairs(gg.getRangesList(lib)) do
+    if v.type:sub(3, 3) == 'x' then
+      targetaddr = v.start + offset
+      break
+    end
+  end
+  for i = 1, size do
+    targets[#targets + 1] = {
+      address = targetaddr + #targets,
+      flags = gg.TYPE_BYTE,
+    }
+  end
+  for i, item in ipairs(gg.getValues(targets)) do
+    result[i] = item.value & 0xff
+  end
+  return result
 end

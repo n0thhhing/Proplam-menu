@@ -1,3 +1,0 @@
-{
-  "Lua.diagnostics.disable": ["lowercase-global", "param-type-mismatch", "need-check-nil"]
-}
