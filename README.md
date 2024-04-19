@@ -22,4 +22,4 @@ By accessing and using this OPEN SOURCE menu, you agree to the following terms:
 
 5. **No Warranty**: The menu is provided "as is" without any warranty, express or implied. I shall not be liable for any damages arising from the use or inability to use the menu.
 
-6. **Modification*: I reserve the right to modify these terms at any time without prior notice.
+6. **Modification**: I reserve the right to modify these terms at any time without prior notice.
