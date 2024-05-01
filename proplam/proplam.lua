@@ -1,10 +1,16 @@
+--[[
+** credits **
+   herx
+   fede
+   zygisk
+]]
+
 require('game') --gameplay
 require('patchers') -- for offset patches
 require('toggles') -- for on/off functions
 require('config') -- config
 require('values') -- offsets/hex
-version = '24.1.2'
-
+version = '24.4.2' -- if this isnt the version i say it is, dont worry, i just forgot to update the variable
 ------------------------------------------------------------------------------
 
 --main--
@@ -19,6 +25,7 @@ function home()
         '[🕹️] • Gameplay',
         '[❓] • Misc',
         '[⚙️] • Config',
+        '[❔] • TOS',
         '[❌] • Exit',
       },
       nil,
@@ -555,15 +562,7 @@ function home()
     if armor == 17 then
       rarity =
         gg.choice(
-          {
-            '⚪ • Common',
-            '🟢 • Uncommon',
-            '🔵 • Rare',
-            '🟡 • Epic',
-            '🔴 • Legendary',
-            '🟣 • Mythical',
-            '⬅  Back',
-          },
+          { '⚪ • Common', '🟢 • Uncommon', '🔵 • Rare', '🟡 • Epic', '🔴 • Legendary', '🟣 • Mythical', '⬅  Back' },
           nil,
           'Rarity selection'
         )
@@ -874,11 +873,7 @@ function home()
             'Step 5: Enjoy! ❤️🙏🏽',
           })
         end
-        zz =
-          gg.choice(
-            { '500', '1000', '2500', '5000[max or ban]', '⬅  Back' },
-            'cracked collectibles'
-          )
+        zz = gg.choice({ '500', '1000', '2500', '5000[max or ban]', '⬅  Back' }, 'cracked collectibles')
         if zz == 1 then
         elseif zz == 2 then
           if useHex then
@@ -1304,14 +1299,10 @@ function home()
     if misc == 2 then
       function updater()
         gg.alert('make sure search helper is off')
-        gg.alert(
-          'pause the game using game guardian at 50-75% then you are good to use update bypass'
-        )
-        version =
-          gg.choice({ '🔄 • edit version' }, nil, '💨 • Update bypass[you dont actually need this]')
+        gg.alert('pause the game using game guardian at 50-75% then you are good to use update bypass')
+        version = gg.choice({ '🔄 • edit version' }, nil, '💨 • Update bypass[you dont actually need this]')
         if version == 1 then
-          prompt =
-            gg.prompt({ 'current version', 'latest version' }, { '23.3.2', '23.7.2' }, { 'text' })
+          prompt = gg.prompt({ 'current version', 'latest version' }, { '23.3.2', '23.7.2' }, { 'text' })
 
           if prompt ~= nil then
             gg.clearResults()
@@ -1429,8 +1420,7 @@ function home()
 
     --ban--
     if misc == 6 then
-      ban =
-        gg.choice({ '😲 | ban me', '😢 | no I dont want to be banned' }, nil, '☠️ • Ban[yourself]')
+      ban = gg.choice({ '😲 | ban me', '😢 | no I dont want to be banned' }, nil, '☠️ • Ban[yourself]')
       if ban == 1 then
         gg.alert('After use, close the game and restart. Now you should be banned.')
 
@@ -1487,6 +1477,11 @@ function home()
     fni()
   end
   if main == 8 then
+    gg.alert(
+      'By accessing and using this OPEN SOURCE menu, you agree to the following terms:' .. '\nUsage Rights: You are granted the right to use, modify, repurpose, fork, and clone the menu for personal or commercial purposes.' .. '\nRestriction on Sale: You shall not sell, sublicense, or otherwise distribute the menu or any derivative works thereof, whether modified or unmodified, in any form.' .. '\nAttribution: While not mandatory, attribution to myself or any associated developers is appreciated but not required, although any modifications, repurposes, forks ect should have the link to this one with the terms stated in #4.' .. '\nLink to Repository: Any usage of the menu must include a prominent link to the repository where it is hosted.' .. '\nNo Warranty: The menu is provided "as is" without any warranty, express or implied. I shall not be liable for any damages arising from the use or inability to use the menu.' .. '\nModification: I reserve the right to modify these terms at any time without prior notice.'
+    )
+  end
+  if main == 9 then
     exi()
   end
 end

@@ -1,11 +1,7 @@
 --main gameplay--
 function yes()
   local gameplay =
-    gg.choice(
-      { '[🎣] • Hooks', '[📢] • Non hooks', '[🕹️] • Gamemodes', '⬅ Back' },
-      nil,
-      '🕹️ • Gameplay'
-    )
+    gg.choice({ '[🎣] • Hooks', '[📢] • Non hooks', '[🕹️] • Gamemodes', '⬅ Back' }, nil, '🕹️ • Gameplay')
 
   --gameplay exits--
   if gameplay == 4 then
@@ -29,12 +25,7 @@ function yes()
   if gameplay == 1 then
     findClassPointer('WeaponSounds')
     function Hooky()
-      hooks =
-        gg.choice(
-          { '[🔫] • weapon mods', '[🛡️] • Utilities', '[🔮] • Effects', '⬅ Back' },
-          nil,
-          '🎣 • Hooks'
-        )
+      hooks = gg.choice({ '[🔫] • weapon mods', '[🛡️] • Utilities', '[🔮] • Effects', '⬅ Back' }, nil, '🎣 • Hooks')
 
       local bigFloat = '1000000.0'
       local class = 'WeaponSounds'
@@ -145,11 +136,7 @@ function yes()
             weaponmod()
           end
           local ignorereflect =
-            {
-              { Field[8], gg.TYPE_BYTE, 1 },
-              { Field[9], gg.TYPE_BYTE, 1 },
-              { Field[10], gg.TYPE_BYTE, 1 },
-            }
+            { { Field[8], gg.TYPE_BYTE, 1 }, { Field[9], gg.TYPE_BYTE, 1 }, { Field[10], gg.TYPE_BYTE, 1 } }
           function reflect()
             for i, v in ipairs(ignorereflect) do
               hackOffset(v[1], v[2], v[3])
@@ -267,11 +254,7 @@ function yes()
             Hooky()
           end
           local killAllActive =
-            {
-              { Field[17], gg.TYPE_BYTE, 1 },
-              { Field[18], gg.TYPE_FLOAT, 5 },
-              { Field[19], gg.TYPE_FLOAT, 99999 },
-            }
+            { { Field[17], gg.TYPE_BYTE, 1 }, { Field[18], gg.TYPE_FLOAT, 5 }, { Field[19], gg.TYPE_FLOAT, 99999 } }
           function killAll()
             for i, v in ipairs(killAllActive) do
               hackOffset(v[1], v[2], v[3])
@@ -298,8 +281,7 @@ function yes()
             silentAim()
             uti()
           end
-          local infScoreOffets =
-            { { Field[23], gg.TYPE_BYTE, 1 }, { Field[24], gg.TYPE_FLOAT, 99999 } }
+          local infScoreOffets = { { Field[23], gg.TYPE_BYTE, 1 }, { Field[24], gg.TYPE_FLOAT, 99999 } }
           function infScore()
             for i, v in ipairs(infScoreOffets) do
               hackOffset(v[1], v[2], v[3])
@@ -341,11 +323,7 @@ function yes()
             uti()
           end
           local isfast =
-            {
-              { Field[32], gg.TYPE_BYTE, 1 },
-              { Field[33], gg.TYPE_FLOAT, bigFloat },
-              { Field[34], gg.TYPE_FLOAT, 10 },
-            }
+            { { Field[32], gg.TYPE_BYTE, 1 }, { Field[33], gg.TYPE_FLOAT, bigFloat }, { Field[34], gg.TYPE_FLOAT, 10 } }
           function fastest()
             for i, v in ipairs(isfast) do
               hackOffset(v[1], v[2], v[3])
@@ -535,8 +513,7 @@ function yes()
             pois()
             effective()
           end
-          local blindash =
-            { { Field[72], gg.TYPE_BYTE, 1 }, { Field[73], gg.TYPE_FLOAT, bigFloat } }
+          local blindash = { { Field[72], gg.TYPE_BYTE, 1 }, { Field[73], gg.TYPE_FLOAT, bigFloat } }
           function youcantsee()
             for i, v in ipairs(blindash) do
               hackOffset(v[1], v[2], v[3])
@@ -548,11 +525,7 @@ function yes()
             effective()
           end
           local effectim =
-            {
-              { Field[74], gg.TYPE_BYTE, 1 },
-              { Field[75], gg.TYPE_BYTE, 1 },
-              { Field[76], gg.TYPE_BYTE, 1 },
-            }
+            { { Field[74], gg.TYPE_BYTE, 1 }, { Field[75], gg.TYPE_BYTE, 1 }, { Field[76], gg.TYPE_BYTE, 1 } }
           function immune()
             for i, v in ipairs(effectim) do
               hackOffset(v[1], v[2], v[3])
@@ -603,11 +576,7 @@ function yes()
             effective()
           end
           local shocker =
-            {
-              { Field[85], gg.TYPE_BYTE, 1 },
-              { Field[86], gg.TYPE_FLOAT, 9999 },
-              { Field[87], gg.TYPE_FLOAT, 9999 },
-            }
+            { { Field[85], gg.TYPE_BYTE, 1 }, { Field[86], gg.TYPE_FLOAT, 9999 }, { Field[87], gg.TYPE_FLOAT, 9999 } }
           function sens()
             for i, v in ipairs(shocker) do
               hackOffset(v[1], v[2], v[3])
@@ -636,11 +605,7 @@ function yes()
             effective()
           end
           local curse =
-            {
-              { Field[92], gg.TYPE_BYTE, 1 },
-              { Field[93], gg.TYPE_FLOAT, 9999 },
-              { Field[94], gg.TYPE_FLOAT, 9999 },
-            }
+            { { Field[92], gg.TYPE_BYTE, 1 }, { Field[93], gg.TYPE_FLOAT, 9999 }, { Field[94], gg.TYPE_FLOAT, 9999 } }
           function cursed()
             for i, v in ipairs(curse) do
               hackOffset(v[1], v[2], v[3])
@@ -1073,12 +1038,7 @@ function yes()
       --parkour--
       if gmode == 2 then
         function runner()
-          race =
-            gg.choice(
-              { checkc .. '[✅] • 2b free checkpoints', '⬅ Back' },
-              nil,
-              '[⏫️️] • Parkour challenge'
-            )
+          race = gg.choice({ checkc .. '[✅] • 2b free checkpoints', '⬅ Back' }, nil, '[⏫️️] • Parkour challenge')
           if race == 1 then
             if checkc == OFF then
               if useHex then

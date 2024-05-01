@@ -23,340 +23,266 @@ myt = 'A0008052C0035FD6'
 
 --offsets
 Offset = {}
-Offset[1] = 0x4A625A0 -- clan parts [1]
-Offset[2] = 0x4A6308C -- clan parts [2]
-Offset[3] = 0x4A62298 -- clan energy
-Offset[4] = 0x1787F38 -- free lottery
-Offset[5] = 0x36C4208 -- lottocurrency
-Offset[6] = 0x2F80908 -- Collectibles
-Offset[7] = 0x4458B10 -- freechestcount
-Offset[8] = 0x22B0458 -- gem clicker
-Offset[9] = 0x4925524 -- taskClicker
-Offset[10] = 0x251FDE0 -- pixelClicker
-Offset[11] = 0x21712D0 -- blackMarketClicker
-Offset[12] = 0x285759C -- gadgetUnlocker
-Offset[13] = 0x2F88CA0 -- %fmodule
-Offset[14] = 0x33F2914 -- MaxModules [1]
-Offset[15] = 0x33F31A8 -- MaxModules [2]
-Offset[16] = 0x2F88AF0 -- MaxModules [3]
-Offset[17] = 0x2F893D0 -- NoPartsModules
-Offset[18] = 0x2B42B68 -- noGadgetCooldown [1]
-Offset[19] = 0x2B42BE4 -- noGadgetCooldown [2]
-Offset[20] = 0x20C23E0 -- xp
-Offset[21] = 0x2DA2594 -- lobbybundles
+Offset[1] = 0x4E1FEE8 -- clan parts [1]
+Offset[2] = 0x4E209D4 -- clan parts [2]
+Offset[3] = 0x4E1FBE0 -- clan energy
+Offset[4] = 0x1C9A4F4 -- free lottery
+Offset[5] = 0x2DC6FEC -- lottocurrency
+Offset[6] = 0x35E49C4 -- Collectibles
+Offset[7] = 0x4E7FF10 -- freechestcount
+Offset[8] = 0x24028A8 -- gem clicker
+Offset[9] = 0x48C9870 -- taskClicker
+Offset[10] = 0x26B29B4 -- pixelClicker
+Offset[11] = 0x1E5F544 -- blackMarketClicker
+Offset[12] = 0x29EBD4C -- gadgetUnlocker
+Offset[13] = 0x35E8190 -- %fmodule
+Offset[14] = 0x3F6318C -- MaxModules [1]
+Offset[15] = 0x3F63A20 -- MaxModules [2]
+Offset[16] = 0x35E7FE0 -- MaxModules [3]
+Offset[17] = 0x35E88C0 -- NoPartsModules
+Offset[18] = 0x29E1434 -- noGadgetCooldown [1]
+Offset[19] = 0x29E14B0 -- noGadgetCooldown [2]
+Offset[20] = 0x21FF190 -- xp
+Offset[21] = 0x4782AC0 -- lobbybundles
 Offset[22] = 0x2602920 -- broken
 Offset[23] = 0x2602920 -- broken
-Offset[24] = 0x5155CB4 -- fire rate
-Offset[25] = 0x26DAFE0 -- infammo
-Offset[26] = 0x18D1FD0 -- teamkill[1] [both set to false]
-Offset[27] = 0x18D33E0 -- teamkill[2]
+Offset[24] = 0x55A9F6C -- fire rate
+Offset[25] = 0x24BA08C -- infammo
+Offset[26] = 0x19FCDE0 -- teamkill[1] [both set to false]
+Offset[27] = 0x19FE1F0 -- teamkill[2]
 Offset[28] = 0x2602920 -- broken
-Offset[29] = 0x5214098 -- god[1] [all set to -> C0035FD6]
-Offset[30] = 0x44E52A8 -- god[2]
-Offset[31] = 0x4FA79E4 -- god[3]
-Offset[32] = 0x4FA7154 -- god[4]
+Offset[29] = 0x566D9CC -- god[1] [all set to -> C0035FD6]
+Offset[30] = 0x2A44058 -- god[2]
+Offset[31] = 0x50107C4 -- god[3]
+Offset[32] = 0x500FF30 -- god[4]
 Offset[33] = 0x2602920 -- broken
 Offset[34] = 0x2602920 -- broken
 Offset[35] = 0x2602920 -- broken
 Offset[36] = 0x2602920 -- broken
-Offset[37] = 0x36F3F8C -- arenascore
-Offset[38] = 0x56AA6C8 -- GetFreeCheckpointsCount
-Offset[39] = 0x178A5C4 -- rarity [1]
+Offset[37] = 0x3BA25D0 -- arenascore
+Offset[38] = 0x5B2F8F0 -- GetFreeCheckpointsCount
+Offset[39] = 0x1C9CB80 -- rarity [1]
 Offset[40] = 0x2602920 -- broken
 Offset[41] = 0x2602920 -- broken
-Offset[42] = 0x440EAEC -- Rewards Multiplier In a Game (99x MAX)
-Offset[43] = 0x526C118 -- Unlimited Super Clan Chest,
-Offset[44] = 0x526C868 -- Clan Chest Open Price[1]
-Offset[45] = 0x526D540 -- Clan Chest Open Price[2]
-Offset[46] = 0x526D604 -- Super Clan Chest Points Modifier
-Offset[47] = 0x44154BC -- Egg Reward Modificator[1]
-Offset[48] = 0x4417C38 -- Egg Reward Modificator[2]
-Offset[49] = 0x2490560 -- Give all wears/armors/graffiti require parts [1]
-Offset[50] = 0x2EB0FD8 -- Give all wears/armors/graffiti require parts [2]
-Offset[51] = 0x56B4160 -- campaign
-Offset[52] = 0x516C22C -- guns [1]
-Offset[53] = 0x516FB2C -- guns [2]
-Offset[54] = 0x516C22C -- royal [1]
-Offset[55] = 0x40A2284 -- royal [2]
-Offset[56] = 0x40A8BFC -- wep skins [1]
-Offset[57] = 0x4403204 -- wep skins [2]
-Offset[58] = 0x4096564 -- just armor
-Offset[59] = 0x20C2320 -- set custom level
-Offset[60] = 0x37A1BA8 -- Show all Deleted/Exclusive Gadgets [1]
-Offset[61] = 0x3875614 -- Show all Deleted/Exclusive Gadgets [2]
-Offset[62] = 0x448FA60 -- emperor
-Offset[63] = 0x440EA28 -- inf 2x rew
-Offset[64] = 0x2510F28 -- max pass[temp]
-Offset[65] = 0x25111F8 -- premium pass
-Offset[66] = 0x251B878 -- reset pass
-Offset[67] = 0x46CD0C0 -- pet egg cd
-Offset[68] = 0x58BB364 -- mobs per wave
-Offset[69] = 0x285759C -- clan gadgets
+Offset[42] = 0x45C65D4 -- Rewards Multiplier In a Game (99x MAX)
+Offset[43] = 0x26C3524 -- Unlimited Super Clan Chest,
+Offset[44] = 0x26C3C74 -- Clan Chest Open Price[1]
+Offset[45] = 0x26C494C -- Clan Chest Open Price[2]
+Offset[46] = 0x26C4A10 -- Super Clan Chest Points Modifier
+Offset[47] = 0x45CCFA4 -- Egg Reward Modificator[1]
+Offset[48] = 0x45CF720 -- Egg Reward Modificator[2]
+Offset[49] = 0x25E6434 -- Give all wears/armors/graffiti require parts [1]
+Offset[50] = 0x4474EB0 -- Give all wears/armors/graffiti require parts [2]
+Offset[51] = 0x5B393A4 -- campaign
+Offset[52] = 0x55C0814 -- guns [1]
+Offset[53] = 0x55C4114 -- guns [2]
+Offset[54] = 0x55C0814 -- royal [1]
+Offset[55] = 0x4409958 -- royal [2]
+Offset[56] = 0x4410324 -- wep skins [1]
+Offset[57] = 0x45BACEC -- wep skins [2]
+Offset[58] = 0x43FDC38 -- just armor
+Offset[59] = 0x21FF0D0 -- set custom level
+Offset[60] = 0x540412C -- Show all Deleted/Exclusive Gadgets [1]
+Offset[61] = 0x3A29B24 -- Show all Deleted/Exclusive Gadgets [2]
+Offset[62] = 0x47D7F70 -- emperor
+Offset[63] = 0x45C6510 -- inf 2x rew
+Offset[64] = 0x22B8EF4 -- max pass[temp]
+Offset[65] = 0x22B91C0 -- premium pass
+Offset[66] = 0x22C398C -- reset pass
+Offset[67] = 0x41F6248 -- pet egg cd
+Offset[68] = 0x5A48C6C -- mobs per wave
+Offset[69] = 0x29EBD4C -- clan gadgets
 Offset[70] = 0x2602920 -- broken
-Offset[71] = 0x37A1438 -- unlock unreleased royal and hats
-Offset[72] = 0x4403204 -- wear parts [401F80D2C0035FD6]
-Offset[73] = 0x4096564 -- wear [true]
-Offset[76] = 0x2520514 -- gift pass offers [1]
-Offset[77] = 0x2520588 -- gift pass offers [2]
-Offset[78] = 0x25207D4 -- gift pass offers [3]
-Offset[79] = 0x5361C08 -- clan wear
-Offset[80] = 0x25553DC -- collectibles v2 [true] combined with vd3
-Offset[81] = 0x4096564 -- unreleased royal [false]
-Offset[82] = 0x37A2298 -- unreleased royal [true]
-Offset[83] = 0x1787F38 -- armory price[not weps]
+Offset[71] = 0x54039BC -- unlock unreleased royal and hats
+Offset[72] = 0x45BACEC -- wear parts [401F80D2C0035FD6]
+Offset[73] = 0x43FDC38 -- wear [true]
+Offset[76] = 0x26B3218 -- gift pass offers [1]
+Offset[77] = 0x26B328C -- gift pass offers [2]
+Offset[78] = 0x26B35F8 -- gift pass offers [3]
+Offset[79] = 0x57D0570 -- clan wear
+Offset[80] = 0x22AC6AC -- collectibles v2 [true] combined with vd3
+Offset[81] = 0x43FDC38 -- unreleased royal [false]
+Offset[82] = 0x540481C -- unreleased royal [true]
+Offset[83] = 0x1C9A4F4 -- armory price[not weps]
 --fields
 Field = {}
-Field[1] = '0x1BC' -- railgun [1]
-Field[2] = '0x1C8' -- railgun [2]
-Field[3] = '0x2A8' -- dash [1]
-Field[4] = '0x2B0' -- dash [2]
-Field[5] = '0x1E4' -- charge
-Field[6] = '0x1A5' -- explode
-Field[7] = '0xC0' -- recoil
-Field[8] = '0x128' -- reflect [1]
-Field[9] = '0x129' -- reflect [2]
-Field[10] = '0x12A' -- reflect [3]
-Field[11] = '0x1A6' -- shotgun
-Field[12] = '0x183' -- range
-Field[13] = '0x12B' -- bazooka
-Field[14] = '0x158' -- grenade
-Field[15] = '0x16D' -- fan
-Field[16] = '0x156' -- ghost
-Field[17] = '0x369' -- kill all [1]
-Field[18] = '0x36C' -- kill all [2]
-Field[19] = '0x370' -- kill all [3]
-Field[20] = '0x191' -- round melee [1]
-Field[21] = '0x192' -- round melee [2]
-Field[22] = '0x184' -- round melee [3]
-Field[23] = '0x38C' -- inf score [1]
-Field[24] = '0x398' -- inf score [2]
-Field[25] = '0x80' -- critical
-Field[26] = '0x381' -- invisible [1]
-Field[27] = '0x1E8' -- invisible [2]
-Field[28] = '0x37C' -- invisible [3]
-Field[29] = '0x381' -- invisible [4]
-Field[30] = '0x380' -- invisible [5]
-Field[31] = '0x384' -- invisible [6]
-Field[32] = '0x438' -- isfast [1]
-Field[33] = '0x444' -- isfast [2]
-Field[34] = '0x43C' -- isfast [3]
-Field[35] = '0x3BC' -- dmg [1]
-Field[36] = '0x3C0' -- dmg [2]
-Field[37] = '0x3C4' -- dmg [3]
-Field[38] = '0x3C8' -- dmg [4]
-Field[39] = '0x3CC' -- dmg [5]
-Field[40] = '0x311' -- godm [1]
-Field[41] = '0x1E9' -- godm [2]
-Field[42] = '0x1EA' -- godm [3]
-Field[43] = '0x1EC' -- godm [4]
-Field[44] = '0x3EC' -- godm [5]
-Field[45] = '0x3F0' -- godm [6]
-Field[46] = '0x3F4' -- godm [7]
-Field[47] = '0x20D' -- godm [8]
-Field[48] = '0x5A4' -- godm [9]
-Field[49] = '0x5A5' -- godm [10]
-Field[50] = '0x5A8' -- godm [11]
-Field[51] = '0x330' -- coin [1]
-Field[52] = '0x334' -- coin [2]
-Field[53] = '0x24B' -- ray [1]
-Field[54] = '0x24C' -- ray [2]
-Field[55] = '0x24D' -- ray [4]
-Field[56] = '0x25C' -- ray [5]
-Field[57] = '0xC6' -- ray [6]
-Field[58] = '0xC5' -- ray [7]
-Field[59] = '0x477' -- double jump
-Field[60] = '0x2EC' -- polymorph [1]
-Field[61] = '0x2F0' -- polymorph [2]
-Field[62] = '0x3D8' -- polymorph [3]
-Field[63] = '0x2F8' -- polymorph [4]
-Field[64] = '0x2B8' -- polymorph [5]
-Field[65] = '0x2E0' -- polymorph [6]
-Field[66] = '0x2D8' -- polymorph [7]
-Field[67] = '0x260' -- bighead [1]
-Field[68] = '0x264' -- bighead [2]
-Field[69] = '0xC1' -- poison [1]
-Field[70] = '0xD8' -- poison [2]
-Field[71] = '0x204' -- poison [3]
-Field[72] = '0x268' -- blind [1]
-Field[73] = '0x270' -- blind [2]
-Field[74] = '0x248' -- effect immunity [1]
-Field[75] = '0x249' -- effect immunity [2]
-Field[76] = '0x24A' -- effect immunity [3]
-Field[77] = '0x318' -- explode die [1]
-Field[78] = '0x324' -- explode die [2]
-Field[79] = '0x31C' -- explode die [3]
-Field[80] = '0x320' -- explode die [4]
-Field[81] = '0x274' -- charm [1]
-Field[82] = '0x278' -- charm [2]
-Field[83] = '0x27C' -- weak [1]
-Field[84] = '0x280' -- weak [2]
-Field[85] = '0xA9' -- shock [1]
-Field[86] = '0xAC' -- shock [2]
-Field[87] = '0xB0' -- shock [3]
-Field[88] = '0xC2' -- slow [1]
-Field[89] = '0xEC' -- slow [2]
-Field[90] = '0xF0' -- slow [3]
-Field[91] = '0x230' -- slow [4]
-Field[92] = '0x214' -- curse [1]
-Field[93] = '0x218' -- curse [2]
-Field[94] = '0x21C' -- curse [3]
-Field[95] = '0x20E' -- disable jump [1]
-Field[96] = '0x210' -- disable jump [2]
-Field[97] = '0x1F0' -- gadget [1]
-Field[98] = '0x1F4' -- gadget [2]
+Field[1] = "0x1C4" -- railgun [1]
+Field[2] = "0x1D0" -- railgun [2]
+Field[3] = "0x2B0" -- dash [1]
+Field[4] = "0x2B8" -- dash [2]
+Field[5] = "0x1EC" -- charge
+Field[6] = "0x1AD" -- explode
+Field[7] = "0xC8" -- recoil
+Field[8] = "0x130" -- reflect [1]
+Field[9] = "0x131" -- reflect [2]
+Field[10] = "0x132" -- reflect [3]
+Field[11] = "0x1AE" -- shotgun
+Field[12] = "0x18B" -- range
+Field[13] = "0x133" -- bazooka
+Field[14] = "0x160" -- grenade
+Field[15] = "0x175" -- fan
+Field[16] = "0x15E" -- ghost
+Field[17] = "0x371" -- kill all [1]
+Field[18] = "0x374" -- kill all [2]
+Field[19] = "0x378" -- kill all [3]
+Field[20] = "0x199" -- round melee [1]
+Field[21] = "0x19A" -- round melee [2]
+Field[22] = "0x18C" -- round melee [3]
+Field[23] = "0x394" -- inf score [1]
+Field[24] = "0x3A4" -- inf score [2]
+Field[25] = "0x80" -- critical
+Field[26] = "0x389" -- invisible [1]
+Field[27] = "0x1F0" -- invisible [2]
+Field[28] = "0x384" -- invisible [3]
+Field[29] = "0x389" -- invisible [4]
+Field[30] = "0x388" -- invisible [5]
+Field[31] = "0x38C" -- invisible [6]
+Field[32] = "0x448" -- isfast [1]
+Field[33] = "0x454" -- isfast [2]
+Field[34] = "0x44C" -- isfast [3]
+Field[35] = "0x3C8" -- dmg [1]
+Field[36] = "0x3CC" -- dmg [2]
+Field[37] = "0x3D0" -- dmg [3]
+Field[38] = "0x3D4" -- dmg [4]
+Field[39] = "0x3D8" -- dmg [5]
+Field[40] = "0x319" -- godm [1]
+Field[41] = "0x1F1" -- godm [2]
+Field[42] = "0x1F2" -- godm [3]
+Field[43] = "0x1F4" -- godm [4]
+Field[44] = "0x3FC" -- godm [5]
+Field[45] = "0x400" -- godm [6]
+Field[46] = "0x404" -- godm [7]
+Field[47] = "0x215" -- godm [8]
+Field[48] = "0x5B4" -- godm [9]
+Field[49] = "0x5B5" -- godm [10]
+Field[50] = "0x5B8" -- godm [11]
+Field[51] = "0x338" -- coin [1]
+Field[52] = "0x33C" -- coin [2]
+Field[53] = "0x253" -- ray [1]
+Field[54] = "0x254" -- ray [2]
+Field[55] = "0x255" -- ray [4]
+Field[56] = "0x264" -- ray [5]
+Field[57] = "0xCE" -- ray [6]
+Field[58] = "0xCD" -- ray [7]
+Field[59] = "0x487" -- double jump
+Field[60] = "0x2F4" -- polymorph [1]
+Field[61] = "0x2F8" -- polymorph [2]
+Field[62] = "0x3E4" -- polymorph [3]
+Field[63] = "0x300" -- polymorph [4]
+Field[64] = "0x2C0" -- polymorph [5]
+Field[65] = "0x2E8" -- polymorph [6]
+Field[66] = "0x2E0" -- polymorph [7]
+Field[67] = "0x268" -- bighead [1]
+Field[68] = "0x26C" -- bighead [2]
+Field[69] = "0xC1" -- poison [1]
+Field[70] = "0xD8" -- poison [2]
+Field[71] = "0x20C" -- poison [3]
+Field[72] = "0x270" -- blind [1]
+Field[73] = "0x278" -- blind [2]
+Field[74] = "0x250" -- effect immunity [1]
+Field[75] = "0x251" -- effect immunity [2]
+Field[76] = "0x252" -- effect immunity [3]
+Field[77] = "0x320" -- explode die [1]
+Field[78] = "0x32C" -- explode die [2]
+Field[79] = "0x324" -- explode die [3]
+Field[80] = "0x328" -- explode die [4]
+Field[81] = "0x27C" -- charm [1]
+Field[82] = "0x280" -- charm [2]
+Field[83] = "0x284" -- weak [1]
+Field[84] = "0x288" -- weak [2]
+Field[85] = "0xA9" -- shock [1]
+Field[86] = "0xAC" -- shock [2]
+Field[87] = "0xB0" -- shock [3]
+Field[88] = "0xC2" -- slow [1]
+Field[89] = "0xEC" -- slow [2]
+Field[90] = "0xF0" -- slow [3]
+Field[91] = "0x238" -- slow [4]
+Field[92] = "0x21C" -- curse [1]
+Field[93] = "0x220" -- curse [2]
+Field[94] = "0x224" -- curse [3]
+Field[95] = "0x216" -- disable jump [1]
+Field[96] = "0x218" -- disable jump [2]
+Field[97] = "0x1F8" -- gadget [1]
+Field[98] = "0x1FC" -- gadget [2]
 Hex = {}
-Hex[1] =
-  'f553bea9f37b01a9759e0190a8264039f303012af40300aa28010037e073019000f442f9fc713097e07301b000b846f9f971309728008052a8260039e00314aa' -- clan parts [1]
-Hex[2] =
-  'f553bea9f37b01a9559e01f0a8524039f303012af40300aae8010037a07601f0006841f9416f3097c07401b000e047f93e6f3097c07301f000f442f93b6f3097' -- clan parts [2]
-Hex[3] =
-  'fe0f1ff8c7feff97a00000b400a00191e1031faafe0741f8f4a1e21706733097fe0f1ff895ffff97800000b4000840f9fe0741f8c0035fd6ff723097f40f1ef8' -- clan energy
-Hex[4] =
-  'fe0f1ff8080840f9e0230091e1031faae80700f9cd0aae94fe0741f8c0035fd6000c40f9c0035fd6018c01f87fdbfb17f60f1df8f55301a9f37b02a9953403b0' -- free lottery
-Hex[5] =
-  'ffc300d1f55301a9f37b02a9143b029088625e39f30300aa280100370011029000c845f9e2ea7e9780130290007040f9dfea7e972800805288621e39ff0700f9' -- lottocurrency
-Hex[6] =
-  '00600091e1031faa5c284e14ff8304d1fc7300f9f75b0fa9f55310a9f37b11a9177502b0d64c02d0f30308aae81e6339d6c242f9f403012af503002ac8000037' -- Collectibles
-Hex[7] =
-  'f553bea9f37b01a995ce01f0a81e4439f30301aaf40300aac8000037e0a30190009840f9a098489728008052a81e0439880e40f9c80100b4e9a30190299940f9' -- freechestcount
-Hex[8] =
-  'ff4304d1fc6300f9f9630da9f75b0ea9f5530fa9f37b10a975db029094ae0290a8725e3994f242f9f30300aac803003780ae029000f042f9493acf9740b302f0' -- gem clicker
-Hex[9] =
-  'f37bbfa9f30300aae7ffff97e0000036602a40f9600100b4080040f9098559a920013fd680000036e0031f2af37bc1a8c0035fd6e00313aaf37bc1a8c0ffff17' -- taskClicker
-Hex[10] =
-  'f553bea9f37b01a9f5c702d0a8d26539f303012af40300aac8000037409e02b0009841f9ec7bc59728008052a8d22539943a40f9e003132ae1031faa30ac7794' -- pixelClicker
-Hex[11] =
-  'f37bbfa9f30300aae0e6ff97800000b461aa40b9f37bc1a875f5ff17f836d497f37bbfa9f30300aad8e6ff97000100b461aa40b99cf3ff97a00000b400900091' -- blackMarketClicker
-Hex[12] =
-  'f40f1ef8f37b01a934ae02f088c66a39f30300aa88010037608702d0000843f9fe9db897c08402f0006044f9fb9db897808602b0003c47f9f89db89728008052' -- gadgetUnlocker
-Hex[13] =
-  'f37bbfa9f30300aa92ffff97e103002ae00313aa84010094800000b4001040bdf37bc1a8c0035fd681d89b97f37bbfa9f30300aa87ffff97e103002ae00313aa' -- %fmodule
-Hex[14] =
-  'f60f1df8f55301a9f37b02a9945102b0562302f088ba5f39d61243f9f30300aae8010037602302b000b443f91d318a97602b02f0009043f91a318a97002902b0' -- MaxModules [1]
-Hex[15] =
-  'fe0f1ff8fcfeff971f000071e0179f1afe0741f8c0035fd6f60f1df8f55301a9f37b02a996510290c8c65f39f503022af30301aaf40300aac8000037402a02b0' -- MaxModules [2]
-Hex[16] =
-  'f40f1ef8f37b01a9d47402b0885a6239f30300aac8000037404b02d0006044f9a9d89b9728008052885a2239e00313aa160000941f040071eb010054484b02d0' -- MaxModules [3]
-Hex[17] =
-  'f60f1df8f55301a9f37b02a9d674029095460290c87a6239b5da45f9f303012af40300aac80000378046029000d845f96dd69b9728008052c87a2239a00240f9' -- NoPartsModules
-Hex[18] =
-  'f37bbfa9f30300aa000840f9e00100b4e1031faa73462e940820201e01010054600e40f9200100b4e1031faa6d462e940820201ee0179f1a02000014e0031f2a' -- noGadgetCooldown [1]
-Hex[19] =
-  'fe0f1ff8081040f9a80000b4e00308aae1031faafe0741f853462e14080040f909855ca920013fd6800000b4e1031faafe0741f80194f417acf0ac97f40f1ef8' -- noGadgetCooldown [2]
-Hex[20] =
-  'f553bea9f37b01a9d3ea02b0d4c102f068366739949245f9e801003780be02b0007c41f96cf2d69760c202d000ec43f969f2d697c0c102f0009045f966f2d697' -- xp
-Hex[21] =
-  'f60f1df8f55301a9f37b02a9f48302d0883e6639f30300aae8010037405502f0004044f9ff71a397205802f0002447f9fc71a397e05802d0008442f9f971a397' -- lobbybundles
-Hex[22] = 'broken'
-Hex[23] = 'broken'
-Hex[24] =
-  'ffc300d1f55301a9f37b02a9f56601b0343e01f0a8427439944642f9f303002a68030037403b019000a446f935a41497403a01f0007044f932a41497403801d0' -- fire rate
-Hex[25] =
-  'f40f1ef8f37b01a934ba0290f38b0290882e4639731e44f928010037808e02f0008844f96c8fbe97c08b02f0001c44f9698fbe9728008052882e0639600240f9' -- infammo
-Hex[26] =
-  '1fa0007168010054e803002a290080522821c89a890680d26901a2f24922c0f21f0109ea6000005420008052c0035fd61f9c0071e8179f1a1fb00071e9179f1a' -- teamkill[1] [both set to false]
-Hex[27] =
-  'f40f1ef8f37b01a9342a03b0b3fc02b088e66239733e45f928010037400203b0004442f96caef697a0fc02b0003c45f969aef6972800805288e62239600240f9' -- teamkill[2]
-Hex[28] = 'broken'
-Hex[29] =
-  'ff8303d1ef3b046ded33056deb2b066de923076dfc6f08a9fa6709a9f85f0aa9f6570ba9f44f0ca9fd7b0da9f66001f055380190c8de4339b54642f9f403062a' -- god[1] [all set to -> C0035FD6]
-Hex[30] =
-  'e923bc6df60b00f9f55302a9f37b03a934ca01d0d6a201b088ee5639d6ae45f9f30300aa28010037a0a101f0004442f9b7664697c0a201b000ac45f9b4664697' -- god[2]
-Hex[31] =
-  'f80f1cf8f75b01a9f55302a9f37b03a9557401f0a8864139f40301aaf30300aae8040037a04b01b0004442f9e95c1b97404d01b0009842f9e65c1b97204d0190' -- god[3]
-Hex[32] =
-  'ee0f19fcedb3006debab016de9a3026df81f00f9f75b04a9f55305a9f37b06a9557401f0a87e4139f40301aaf30300aaa8050037a04a01d0003046f9095f1b97' -- god[4]
-Hex[33] = 'broken'
-Hex[34] = 'broken'
-Hex[35] = 'broken'
-Hex[36] = 'broken'
-Hex[37] =
-  'f40f1ef8f37b01a9943902b0730e029088c66539731e44f9c8000037600e0290001c44f9812b7e972800805288c62539600240f908e040b968000035b82b7e97' -- arenascore
-Hex[38] =
-  'f553bea9f37b01a9543c01f0951301d088fa6a39b54642f9f30300aae8010037801301d0004442f9b151ff96001101b0002043f9ae51ff9640120190006044f9' -- GetFreeCheckpointsCount
-Hex[39] =
-  'f40f1ef8f37b01a9743403d088064c39f30300aa28010037800c03d0004442f9f4d1fb97400b0390006044f9f1d1fb972800805288060c39e00313aa21000094' -- rarity [1]
-Hex[40] = 'broken'
-Hex[41] = 'broken'
-Hex[42] =
-  'f553bea9f37b01a9f5d00190a82e7c39f403012af30300aac800003740a701f0003842f9a9c0499728008052a82e3c39600a40f9c00100b448a701f0083942f9' -- Rewards Multiplier In a Game (99x MAX)
-Hex[43] =
-  'ff8300d1f37b01a9335e01f0682a553928010037003301b0006042f9204b1097803001f0003847f91d4b109728008052682a15394cfbff97a00200b46bfbff97' -- Unlimited Super Clan Chest,
-Hex[44] =
-  'ff0301d1f75b01a9f55302a9f37b03a9375e01f0d63401b0e84a5539d60243f9f403022af503012af30300aa680300372033019000c843f945491097a0330190' -- Clan Chest Open Price[1]
-Hex[45] =
-  'f60f1df8f55301a9f37b02a9365e01d015350190c83e5539b5ea44f9f303012af403002a880100370035019000e844f911461097a03401b000a847f90e461097' -- Clan Chest Open Price[2]
-Hex[46] =
-  'ff0301d1f75b01a9f55302a9f37b03a9375e01d0563401b0e84e5539d6fa40f9f403022af503012af30300aa68030037003301f000c843f9de451097803301f0' -- Super Clan Chest Points Modifier
-Hex[47] =
-  'f75bbda9f55301a9f37b02a9b5d001b094a201f0a8267d39943e45f9f30300aae8010037a0a901f000e442f933a64997e0a60190001840f930a6499780a201f0' -- Egg Reward Modificator[1]
-Hex[48] =
-  'f40f1ef8f37b01a9000200b4f30300aa00500091e1031faa8ccbfb97147ca00a60720091e1031faa88cbfb97f37b41a9087ca00a01050011e003142ae2031faa' -- Egg Reward Modificator[2]
-Hex[49] =
-  'f75bbda9f55301a9f37b02a977cc02b0e84a5239f303032af403022af603012af50300aa8801003780a002d000a440f909bac797e0a502f0006c45f906bac797' -- Give all wears/armors/graffiti require parts [1]
-Hex[50] =
-  'ff8304d1fc5310a9f37b11a900e4006fe8030391f303012af40300aae00307ade00306ad8b010094e00314aae103132ae3ffff97a0030036e0030391e1031faa' -- Give all wears/armors/graffiti require parts [2]
-Hex[51] =
-  'f553bea9f37b01a9153c01b0b40f01d0a82a6c39940246f9f30300aac8000037a00f01d0000046f90b2bff9628008052a82a2c39e00313aadfffff97880240f9' -- campaign
-Hex[52] =
-  'f553bea9f37b01a9356601d0943a01b0a8ea753994a646f9f303002a88010037803a01b000a446f9d84a1497003f01d000c042f9d54a1497403701b000d445f9' -- guns [1]
-Hex[53] =
-  'ff8302d1f44300f9f37b09a9146601f088e67539f30300aa88010037603a01d000a446f9993c1497203701d000d445f9963c1497003701d000c441f9933c1497' -- guns [2]
-Hex[54] =
-  'f553bea9f37b01a9356601d0943a01b0a8ea753994a646f9f303002a88010037803a01b000a446f9d84a1497003f01d000c042f9d54a1497403701b000d445f9' -- royal [1]
-Hex[55] =
-  'fb6bbba9f96301a9f75b02a9f55303a9f37b04a933ec01f0f7c4019068266739f75a47f9f503022af60301aaf403002a0806003700bf0190001843f9bd725797' -- royal [2]
-Hex[56] =
-  'ffc305d1fca300f9f55315a9f37b16a915ec01b054be0190a82a6839944245f9f30300aae8010037a0c001b000a446f962585797e0c001d0004443f95f585797' -- wep skins [1]
-Hex[57] =
-  'f553bea9f37b01a934d101f0d5a3019088ba7a39b53647f9f30300aa28010037c0a30190003447f9e2ee499760a701f0006044f9dfee49972800805288ba3a39' -- wep skins [2]
-Hex[58] =
-  'e80193524800a0721f00086b6d010054080293524800a0721f00086be001005408e497524800a0721f00086b6001005408c69c520600001408d984524800a072' -- just armor
-Hex[59] =
-  'f40f1ef8f37b01a9d3ea02b094c10290682e6739946244f9c800003780c10290006044f99cf2d69728008052682e2739800240f908e040b948000035d3f2d697' -- set custom level
-Hex[60] =
-  'f553bea9f37b01a9153402f0a8267c39f30301aaf40300aac8000037000a02f0003447f97a747b9728008052a8263c39330500b4686240b9891240b91f01096b' -- Show all Deleted/Exclusive Gadgets [1]
-Hex[61] =
-  'f60f1df8f55301a9f37b02a9942d0290882a5839f30300aaa8020037200702b000f443f9df257897200702d0005446f9dc257897200002d0003447f9d9257897' -- Show all Deleted/Exclusive Gadgets [2]
-Hex[62] =
-  'f40f1ef8f37b01a9f3cc019014a301f068764a39946244f9c800003700a301f0006044f9ccbc47972800805268760a39800240f908e040b94800003503bd4797' -- emperor
-Hex[63] =
-  'ff0301d1f60b00f9f55302a9f37b03a9f6d00190b5a201d0c83e7c39b55643f9f303012af40300aa88010037a0a201d0005443f9d6c0499700a501b0000c46f9' -- inf 2x rew
-Hex[64] =
-  'fe0f1ff8871d0094a00000b400c00091e1031faafe0741f8d0e67714fe0741f8c0035fd6ff4305d1fc6f0fa9fa6710a9f85f11a9f65712a9f44f13a9fd7b14a9' -- max pass[temp]
-Hex[65] =
-  'fe0f1ff8d31c0094600000b4fe0741f88c2c0014fe0741f8c0035fd6f40f1ef8f37b01a974c80290885a6439f30300aa2801003720a202f0003c43f9e0b6c597' -- premium pass
-Hex[66] =
-  'ffc300d1f40b00f9f37b02a914c802d0882e6439f30300aa2801003700a202b0008041f9468dc597c0a102d0009c47f9438dc59728008052882e2439680a40f9' -- reset pass
-Hex[67] =
-  'f60f1df8f55301a9f37b02a9f5ba01f0748c01f0a8ce5839948240f9f30300aa88010037409401b0000046f932c73e97a08e01f000ac44f92fc73e97608c01f0' -- pet egg cd
-Hex[68] =
-  'f40f1ef8f37b01a9d42b01f0930401b088f67239737e41f988010037000101f0004044f98b0ef79660010190008c45f9880ef796800401b0007c41f9850ef796' -- mobs per wave
-Hex[69] =
-  'f40f1ef8f37b01a934ae02f088c66a39f30300aa88010037608702d0000843f9fe9db897c08402f0006044f9fb9db897808602b0003c47f9f89db89728008052' -- clan gadgets
-Hex[70] = 'broken'
-Hex[71] =
-  'f75bbda9f55301a9f37b02a9163402f0f70d02f0c8f67b39f79a44f9f40302aaf50301aaf30300aa88010037a00802f0008040f952767b97a00b02b0000845f9' -- unlock unreleased royal and hats
-Hex[72] =
-  'f553bea9f37b01a934d101f0d5a3019088ba7a39b53647f9f30300aa28010037c0a30190003447f9e2ee499760a701f0006044f9dfee49972800805288ba3a39' -- wear parts [401F80D2C0035FD6]
-Hex[73] =
-  'e80193524800a0721f00086b6d010054080293524800a0721f00086be001005408e497524800a0721f00086b6001005408c69c520600001408d984524800a072' -- wear [true]
-Hex[76] =
-  'f40f1ef8f37b01a9f4c702b0886e6539f30300aac8000037c09a02f0003447f9207ac59728008052886e2539680e40f9a80100b4c99a02f0293547f9132940f9' -- gift pass offers [1]
-Hex[77] =
-  'f40f1ef8f37b01a9f4c702b088726539f30300aac8000037c09a02f0003447f9037ac5972800805288722539680e40f9a80100b4c99a02f0293547f9131540f9' -- gift pass offers [2]
-Hex[78] =
-  'ff4301d1fe2300f900e4006fe8030091e00301ade00300adb2feff97e0030091e1031faad4702994fe2340f91f1c2f71e0179f1aff430191c0035fd6f553bea9' -- gift pass offers [3]
-Hex[79] =
-  'fe0f1ff8084042f8e0230091e1031faae80700f999a3be97e803202a007d1f53fe0741f8c0035fd6fe0f1ff808c041f8e0230091e1031faae80700f98fa3be97' -- clan wear
-Hex[80] =
-  'f40f1ef8f37b01a954c6029088a66b39f30300aac8000037e09c02b0006044f96ea6c4972800805288a62b39e00313aa01ffff97e0010036e89c02b0086144f9' -- collectibles v2 [true] combined with vd3
-Hex[81] =
-  'e80193524800a0721f00086b6d010054080293524800a0721f00086be001005408e497524800a0721f00086b6001005408c69c520600001408d984524800a072' -- unreleased royal [false]
-Hex[82] =
-  'f60f1df8f55301a9f37b02a9153402d0a83e7c39f30301aaf40300aa88010037c00a02f0009045f9bd727b97200702d0004046f9ba727b97e00c0290005c42f9' -- unreleased royal [true]
-Hex[83] =
-  'fe0f1ff8080840f9e0230091e1031faae80700f9cd0aae94fe0741f8c0035fd6000c40f9c0035fd6018c01f87fdbfb17f60f1df8f55301a9f37b02a9953403b0'
-
-
--- armory price[not weps]
+Hex[1] = "f553bea9f37b01a9f5b20190a84e5139f303012af40300aa28010037a0860190005441f9035c2697a08601b000f845f9005c269728008052a84e1139e00314aa" -- clan parts [1]
+Hex[2] = "f553bea9f37b01a9d5b201f0a87a5139f303012af40300aae8010037808901d000f045f948592697808701d000f047f945592697808601f0005441f942592697" -- clan parts [2]
+Hex[3] = "fe0f1ff8c7feff97a00000b400a00191e1031faafe0741f89cd8bd170d5d2697fe0f1ff895ffff97800000b4000840f9fe0741f8c0035fd6065d2697f40f1ef8" -- clan energy
+Hex[4] = "fe0f1ff8080840f9e0230091e1031faae80700f958ee8394fe0741f8c0035fd6000c40f9c0035fd6018c01f86972ec17f60f1df8f55301a9f37b02a9753e0390" -- free lottery
+Hex[5] = "ffc300d1f55301a9f37b02a934b502d088827e39f30300aa28010037c08c02d0002844f9c2bfa797408d02b000dc41f9bfbfa7972800805288823e39ff0700f9" -- lottocurrency
+Hex[6] = "00600091e1031faa27c51e14ff4303d1f75b0aa9f5530ba9f37b0ca900e4006f400001ad400000ad210041ad230840adf30302aaf40301aae10304ade30b03ad" -- Collectibles
+Hex[7] = "f553bea9f37b01a9f5af0190a8aa5c39f30301aaf40300aac8000037e08201d0007041f9f9db249728008052a8aa1c39880e40f9c80100b4e98201d0297141f9" -- freechestcount
+Hex[8] = "ff4304d1fc6300f9f9630da9f75b0ea9f5530fa9f37b10a9350303d054d60290a8ba743994ce41f9f30300aac803003740d6029000cc41f98ed1ce9740db02d0" -- gem clicker
+Hex[9] = "f37bbfa9f30300aae7ffff97e0000036602a40f9600100b4080040f9098559a920013fd680000036e0031f2af37bc1a8c0035fd6e00313aaf37bc1a8c0ffff17" -- taskClicker
+Hex[10] = "f553bea9f37b01a9b5ed02f0a85e7a39f303012af40300aac800003720bf029000f441f95011c49728008052a85e3a39943e40f9e003132ae1031faa358e5b94" -- pixelClicker
+Hex[11] = "f37bbfa9f30300aa3be7ff97800000b461aa40b9f37bc1a875f5ff17b45ee597f37bbfa9f30300aa33e7ff97000100b461aa40b9f8f3ff97a00000b400900091" -- blackMarketClicker
+Hex[12] = "f40f1ef8f37b01a914d4029088f64239f30300aa8801003780ab02f0000043f96b2cb79780a902f0005c43f9682cb797a0aa02b0009846f9652cb79728008052" -- gadgetUnlocker
+Hex[13] = "f37bbfa9f30300aa92ffff97e103002ae00313aa84010094800000b4001040bdf37bc1a8c0035fd69e3b8797f37bbfa9f30300aa87ffff97e103002ae00313aa" -- %fmodule
+Hex[14] = "f60f1df8f55301a9f37b02a9942802b036f8019088fe7639d6da43f9f30300aae8010037a0fd01f0004047f9584f619760fd01d000c046f9554f619760fc01f0" -- MaxModules [1]
+Hex[15] = "fe0f1ff8fcfeff971f000071e0179f1afe0741f8c0035fd6f60f1df8f55301a9f37b02a9962802b0c80a7739f503022af30301aaf40300aac8000037600002b0" -- MaxModules [2]
+Hex[16] = "f40f1ef8f37b01a9547402b088d24839f30300aac8000037a04902f0005c43f9c63b87972800805288d20839e00313aa160000941f040071eb010054a84902d0" -- MaxModules [3]
+Hex[17] = "f60f1df8f55301a9f37b02a956740290b54702d0c8f24839b57644f9f303012af40300aac8000037a04702d0007444f98a39879728008052c8f20839a00240f9" -- NoPartsModules
+Hex[18] = "f37bbfa9f30300aa000840f9e00100b4e1031faabbd70f940820201e01010054600e40f9200100b4e1031faab5d70f940820201ee0179f1a02000014e0031f2a" -- noGadgetCooldown [1]
+Hex[19] = "fe0f1ff8081040f9a80000b4e00308aae1031faafe0741f89bd70f14080040f909855ca920013fd6800000b4e1031faafe0741f83bbf3114d256b797f40f1ef8" -- noGadgetCooldown [2]
+Hex[20] = "f553bea9f37b01a9531303b0b4e8029068b64339943e46f9e801003720e502d0000c43f959dfd69740e702f0006440f956dfd697a0e80290003c46f953dfd697" -- xp
+Hex[21] = "f60f1df8f55301a9f37b02a9b4e701d088824339f30300aae8010037c0be01d0003047f90dd1409720ba01f000bc41f90ad14097c0b70190002447f907d14097" -- lobbybundles
+Hex[22] = "broken"
+Hex[23] = "broken"
+Hex[24] = "ffc300d1f55301a9f37b02a9b57601f0544c01d0a8664d3994c245f9f303002a6803003740490190006844f9e0330897404801d0000843f9dd330897c0460190" -- fire rate
+Hex[25] = "f40f1ef8f37b01a974fd02f033d302b088424539739244f92801003720d302b0009044f99af3cb9720ce02b000f445f997f3cb972800805288420539600240f9" -- infammo
+Hex[26] = "1fa0007168010054e803002a290080522821c89a890680d26901a2f24922c0f21f0109ea6000005420008052c0035fd61f9c0071e8179f1a1fb00071e9179f1a" -- teamkill[1] [both set to false]
+Hex[27] = "f40f1ef8f37b01a9345303f0d32a03d088664c39736245f928010037a02903b000c045f941e3f697c02a03d0006045f93ee3f6972800805288660c39600240f9" -- teamkill[2]
+Hex[28] = "broken"
+Hex[29] = "ff8303d1ef3b046ded33056deb2b066de923076dfc6f08a9fa6709a9f85f0aa9f6570ba9f44f0ca9fd7b0da9967001f0354601d0c8f25d39b5c245f9f403062a" -- god[1] [all set to -> C0035FD6]
+Hex[30] = "e923bc6df60b00f9f55302a9f37b03a934d102f056a302b088ba4e39d67a47f9f30300aa2801003760a702f000c045f9a4cbb59740a302b0007847f9a1cbb597" -- god[2]
+Hex[31] = "f80f1cf8f75b01a9f55302a9f37b03a975a30190a8665239f40301aaf30300aae8040037007901f000c045f9ca991e97c07a01b000d045f9c7991e97a07a0190" -- god[3]
+Hex[32] = "ee0f19fcedb3006debab016de9a3026df81f00f9f75b04a9f55305a9f37b06a975a301b0a85e5239f40301aaf30300aaa80500372078019000e846f9eb9b1e97" -- god[4]
+Hex[33] = "broken"
+Hex[34] = "broken"
+Hex[35] = "broken"
+Hex[36] = "broken"
+Hex[37] = "f40f1ef8f37b01a994460290d31e029088da5e3973ca41f9c8000037c01e029000c841f9495270972800805288da1e39600240f908e040b96800003580527097" -- arenascore
+Hex[38] = "f553bea9f37b01a9b44a019035200190883a4839b5c245f9f30300aae80100372020019000c045f9801df296601f01f0005c43f97d1df296c01d0190009445f9" -- GetFreeCheckpointsCount
+Hex[39] = "f40f1ef8f37b01a9543e03d088ba5239f30300aa28010037a01403f000c045f9de68ec97001403d0005c43f9db68ec972800805288ba1239e00313aa21000094" -- rarity [1]
+Hex[40] = "broken"
+Hex[41] = "broken"
+Hex[42] = "f553bea9f37b01a995f501b0a8126539f403012af30300aac800003740c7019000c440f948c2479728008052a8122539600a40f9c00100b448c7019008c540f9" -- Rewards Multiplier In a Game (99x MAX)
+Hex[43] = "ff8300d1f37b01a933ed02d068d67c3928010037e0c002d000d843f976cec39760be02d0003c44f973cec3972800805268d63c394cfbff97a00200b46bfbff97" -- Unlimited Super Clan Chest,
+Hex[44] = "ff0301d1f75b01a9f55302a9f37b03a937ed02d076c002d0e8f67c39d62240f9f403022af503012af30300aa68030037c0c202b000f443f99bccc397e0bc02d0" -- Clan Chest Open Price[1]
+Hex[45] = "f60f1df8f55301a9f37b02a936ed02b035c402b0c8ea7c39b5ba46f9f303012af403002a8801003720c402b000b846f967c9c39700c502d0006c46f964c9c397" -- Clan Chest Open Price[2]
+Hex[46] = "ff0301d1f75b01a9f55302a9f37b03a937ed02b0f6c402b0e8fa7c39d6e646f9f403022af503012af30300aa68030037c0c2029000f443f934c9c397e0bc02b0" -- Super Clan Chest Points Modifier
+Hex[47] = "f75bbda9f55301a9f37b02a955f501f074cc0190a80a6639946245f9f30300aae8010037c0cc01b000dc44f9d2a74797c0c901d0003445f9cfa7479760cc0190" -- Egg Reward Modificator[1]
+Hex[48] = "f40f1ef8f37b01a9000200b4f30300aa00500091e1031faacc19df97147ca00a60720091e1031faac819df97f37b41a9087ca00a01050011e003142ae2031faa" -- Egg Reward Modificator[2]
+Hex[49] = "f75bbda9f55301a9f37b02a917f402f0e8c66039f303032af403022af603012af50300aa8801003760c802d0002845f9ad42c797a0c5029000d040f9aa42c797" -- Give all wears/armors/graffiti require parts [1]
+Hex[50] = "ff8304d1fc5310a9f37b11a900e4006fe8030391f303012af40300aae00307ade00306ad76010094e00314aae103132aeaffff97a0030036e0030391e1031faa" -- Give all wears/armors/graffiti require parts [2]
+Hex[51] = "f553bea9f37b01a9554a01d0342101f0a86a4939948a42f9f30300aac8000037202101f0008842f9d3f6f19628008052a86a0939e00313aadfffff97880240f9" -- campaign
+Hex[52] = "f553bea9f37b01a915760190944801b0a80e4f39946a44f9f303002a88010037804801b0006844f9b7d90797204d01f0000445f9b4d90797204501b000dc44f9" -- guns [1]
+Hex[53] = "ff8302d1f44300f9f37b09a9f4750190880a4f39f30300aa88010037604801b0006844f978cb0797004501b000dc44f975cb0797204a01f0006041f972cb0797" -- guns [2]
+Hex[54] = "f553bea9f37b01a915760190944801b0a80e4f39946a44f9f303002a88010037804801b0006844f9b7d90797204d01f0000445f9b4d90797204501b000dc44f9" -- royal [1]
+Hex[55] = "fb6bbba9f96301a9f75b02a9f55303a9f37b04a9730302b057d3019068a27539f7ee43f9f503022af60301aaf403002a08060037c0d201f000ec45f961b54e97" -- royal [2]
+Hex[56] = "ffc305d1fca300f9f55315a9f37b16a9350302d0b4d50190a8a6763994c642f9f30300aae801003700d601b0006844f9f19a4e9780d801f000a044f9ee9a4e97" -- wep skins [1]
+Hex[57] = "f553bea9f37b01a9f4f501b0d5c90190889e6339b53641f9f30300aa2801003720cb0190005c43f981f04797c0c90190003441f97ef0479728008052889e2339" -- wep skins [2]
+Hex[58] = "e80193524800a0721f00086b6d010054080293524800a0721f00086be001005408e497524800a0721f00086b6001005408c69c520600001408d984524800a072" -- just armor
+Hex[59] = "f40f1ef8f37b01a9531303b0f4e802f068ae4339945e43f9c8000037e0e802f0005c43f989dfd6972800805268ae0339800240f908e040b948000035c0dfd697" -- set custom level
+Hex[60] = "f553bea9f37b01a9d58301f0a8de4f39f30301aaf40300aac8000037a05701d0000840f972cb0e9728008052a8de0f39330500b4686240b9891240b91f01096b" -- Show all Deleted/Exclusive Gadgets [1]
+Hex[61] = "f60f1df8f55301a9f37b02a95452029088866e39f30300aaa8020037e023029000f442f9f4347697602a029000e444f9f1347697e02302d000d843f9ee347697" -- Show all Deleted/Exclusive Gadgets [2]
+Hex[62] = "f40f1ef8f37b01a913e501b034ba01f068ae4f39945e43f9c800003720ba01f0005c43f9e17b3f972800805268ae0f39800240f908e040b948000035187c3f97" -- emperor
+Hex[63] = "ff0301d1f60b00f9f55302a9f37b03a996f501b075c501d0c8226539b56a47f9f303012af40300aa8801003760c501d0006847f975c24797e0c7019000f047f9" -- inf 2x rew
+Hex[64] = "fe0f1ff8171e0094800000b4e1031faafe0741f855ee0f14fe0741f8c0035fd6ff4305d1fc6f0fa9fa6710a9f85f11a9f65712a9f44f13a9fd7b14a9940d0390" -- max pass[temp]
+Hex[65] = "fe0f1ff8641d0094800000b4e1031faafe0741f86aed0f14fe0741f8c0035fd6f40f1ef8f37b01a9740d03f088725a39f30300aa2801003700df02b0003841f9" -- premium pass
+Hex[66] = "ffc300d1f40b00f9f37b02a9340d03b088465a39f30300aa2801003780e502f0003440f95acdd39760e50290004c44f957cdd3972800805288461a39680a40f9" -- reset pass
+Hex[67] = "f60f1df8f55301a9f37b02a9f51302f0b4e301d0a8327f39941642f9f30300aa88010037c0eb01d000d042f92903579700e601b0004844f926035797a0e301d0" -- pet egg cd
+Hex[68] = "f40f1ef8f37b01a9d45101d0f32801b088167039737a43f988010037402501f000bc42f9a2b8f596a025019000f846f99fb8f596e02801b0007843f99cb8f596" -- mobs per wave
+Hex[69] = "f40f1ef8f37b01a914d4029088f64239f30300aa8801003780ab02f0000043f96b2cb79780a902f0005c43f9682cb797a0aa02b0009846f9652cb79728008052" -- clan gadgets
+Hex[70] = "broken"
+Hex[71] = "f75bbda9f55301a9f37b02a9f6830190b75b01f0c8ae4f39f76a44f9f40302aaf50301aaf30300aa88010037c0560190000044f94acd0e978058019000f043f9" -- unlock unreleased royal and hats
+Hex[72] = "f553bea9f37b01a9f4f501b0d5c90190889e6339b53641f9f30300aa2801003720cb0190005c43f981f04797c0c90190003441f97ef0479728008052889e2339" -- wear parts [401F80D2C0035FD6]
+Hex[73] = "e80193524800a0721f00086b6d010054080293524800a0721f00086be001005408e497524800a0721f00086b6001005408c69c520600001408d984524800a072" -- wear [true]
+Hex[76] = "f40f1ef8f37b01a9b4ed02d088fa7939f30300aac8000037e0c102f0003441f9380fc4972800805288fa3939680e40f9a80100b4e9c102f0293541f9132940f9" -- gift pass offers [1]
+Hex[77] = "f40f1ef8f37b01a9b4ed02d088fe7939f30300aac8000037e0c102f0003441f91b0fc4972800805288fe3939680e40f9a80100b4e9c102f0293541f9131540f9" -- gift pass offers [2]
+Hex[78] = "ff4301d1fe2300f900e4006fe8030091e00301ade00300ad6afeff97e0030091e1031faa0cc03c94fe2340f91f1c2f71e0179f1aff430191c0035fd6f553bea9" -- gift pass offers [3]
+Hex[79] = "fe0f1ff8084042f8e0230091e1031faae80700f939169797e803202a007d1f53fe0741f8c0035fd6fe0f1ff808c041f8e0230091e1031faae80700f92f169797" -- clan wear
+Hex[80] = "f40f1ef8f37b01a9f40d039088265739f30300aac800003780e302d0005c43f9132ad4972800805288261739e00313aa01ffff97e001003688e302d0085d43f9" -- collectibles v2 [true] combined with vd3
+Hex[81] = "e80193524800a0721f00086b6d010054080293524800a0721f00086be001005408e497524800a0721f00086b6001005408c69c520600001408d984524800a072" -- unreleased royal [false]
+Hex[82] = "f60f1df8f55301a9f37b02a9d58301f0a8f64f39f30301aaf40300aa88010037605801f0003c46f9b5c90e97e0530190007c46f9b2c90e97605901d0009847f9" -- unreleased royal [true]
+Hex[83] = "fe0f1ff8080840f9e0230091e1031faae80700f958ee8394fe0741f8c0035fd6000c40f9c0035fd6018c01f86972ec17f60f1df8f55301a9f37b02a9753e0390" -- armory price[not weps]
